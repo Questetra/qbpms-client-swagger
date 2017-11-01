@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * Qgroup
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-31T08:07:41.678Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-01T00:57:19.411Z")
 public class Qgroup {
   @SerializedName("email")
   private String email = null;

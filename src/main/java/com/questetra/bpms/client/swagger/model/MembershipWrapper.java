@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * MembershipWrapper
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-31T08:07:41.678Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-01T00:57:19.411Z")
 public class MembershipWrapper {
   @SerializedName("membership")
   private Membership membership = null;

@@ -5,33 +5,22 @@
   <artifactId>bpms.client.swagger</artifactId>
   <packaging>jar</packaging>
   <name>bpms.client.swagger</name>
-  <version>0.1.0-11.5.0</version>
-  <url>https://github.com/swagger-api/swagger-codegen</url>
+  <version>11.5.0.developing</version>
+  <url>https://github.com/Questetra/qbpms-client-swagger</url>
   <description>Swagger Java</description>
   <scm>
-    <connection>scm:git:git@github.com:swagger-api/swagger-codegen.git</connection>
+    <connection>scm:git:git@github.com:Questetra/qbpms-client-swagger.git</connection>
     <developerConnection>scm:git:git@github.com:swagger-api/swagger-codegen.git</developerConnection>
-    <url>https://github.com/swagger-api/swagger-codegen</url>
+    <url>https://github.com/Questetra/qbpms-client-swagger</url>
   </scm>
   <prerequisites>
     <maven>2.2.0</maven>
   </prerequisites>
 
   <licenses>
-    <license>
-      <name>Unlicense</name>
-      <url>http://unlicense.org</url>
-      <distribution>repo</distribution>
-    </license>
   </licenses>
 
   <developers>
-    <developer>
-      <name>Swagger</name>
-      <email>apiteam@swagger.io</email>
-      <organization>Swagger</organization>
-      <organizationUrl>http://swagger.io</organizationUrl>
-    </developer>
   </developers>
 
   <build>

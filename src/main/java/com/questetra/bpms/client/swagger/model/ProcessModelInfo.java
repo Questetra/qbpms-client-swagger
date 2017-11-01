@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * ProcessModelInfo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-31T08:07:41.678Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-01T00:57:19.411Z")
 public class ProcessModelInfo {
   @SerializedName("id")
   private Long id = null;
