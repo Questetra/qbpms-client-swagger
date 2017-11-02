@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.questetra</groupId>
     <artifactId>bpms.client.swagger</artifactId>
-    <version>11.5.0.developing</version>
+    <version>11.5.0</version>
     <scope>compile</scope>
 </dependency>
 ```
