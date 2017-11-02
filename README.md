@@ -95,7 +95,7 @@ public class ItemCacheApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://192.168.1.38:8443/userweb/*
+All URIs are relative to *https://online-demo-en.questetra.net/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -217,7 +217,7 @@ Authentication schemes defined for the API:
 
 - **Type**: OAuth
 - **Flow**: accessCode
-- **Authorization URL**: https://192.168.1.38:8443/userweb/oauth2/authorize
+- **Authorization URL**: https://online-demo-en.questetra.net/oauth2/authorize
 - **Scopes**: 
   - any: any access
   - read: read only

@@ -1,6 +1,6 @@
 # QuserApi
 
-All URIs are relative to *https://192.168.1.38:8443/userweb/*
+All URIs are relative to *https://online-demo-en.questetra.net/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
