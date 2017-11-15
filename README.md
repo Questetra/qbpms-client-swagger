@@ -1,4 +1,4 @@
-# bpms.client.swagger
+# Questetra BPM Suite APIs Client Library for Java
 
 ## Requirements
 
