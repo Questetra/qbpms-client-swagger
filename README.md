@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.questetra:bpms.client.swagger:11.5.0.developing"
+compile "com.questetra:bpms.client.swagger:11.5.0"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/bpms.client.swagger-11.5.0.developing.jar
+* target/bpms.client.swagger-11.5.0.jar
 * target/lib/*.jar
 
 ## Getting Started
