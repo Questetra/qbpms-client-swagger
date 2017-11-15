@@ -1,4 +1,4 @@
-# Questetra BPM Suite APIs Client Library for Java
+# Questetra BPM Suite API Client Library for Java
 
 ## Requirements
 
