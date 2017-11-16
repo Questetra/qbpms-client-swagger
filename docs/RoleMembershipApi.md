@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="add"></a>
 # **add**
-> RoleMembership add(quserId, qroleId)
+> RoleMembershipWrapper add(quserId, qroleId)
 
 Adding a Member to a Role
 
@@ -42,7 +42,7 @@ RoleMembershipApi apiInstance = new RoleMembershipApi();
 Long quserId = 789L; // Long | User ID
 Long qroleId = 789L; // Long | Role ID
 try {
-    RoleMembership result = apiInstance.add(quserId, qroleId);
+    RoleMembershipWrapper result = apiInstance.add(quserId, qroleId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling RoleMembershipApi#add");
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RoleMembership**](RoleMembership.md)
+[**RoleMembershipWrapper**](RoleMembershipWrapper.md)
 
 ### Authorization
 
