@@ -104,8 +104,8 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 QuserApi apiInstance = new QuserApi();
 Long id = 789L; // Long | 
-BigDecimal delegateQuserId = new BigDecimal(); // BigDecimal | 
-BigDecimal delegateQgroupId = new BigDecimal(); // BigDecimal | 
+Long delegateQuserId = 789L; // Long | 
+Long delegateQgroupId = 789L; // Long | 
 try {
     apiInstance.delete(id, delegateQuserId, delegateQgroupId);
 } catch (ApiException e) {
@@ -119,8 +119,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Long**|  |
- **delegateQuserId** | **BigDecimal**|  | [optional]
- **delegateQgroupId** | **BigDecimal**|  | [optional]
+ **delegateQuserId** | **Long**|  | [optional]
+ **delegateQgroupId** | **Long**|  | [optional]
 
 ### Return type
 

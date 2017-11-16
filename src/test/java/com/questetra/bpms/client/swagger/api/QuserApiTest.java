@@ -65,8 +65,8 @@ public class QuserApiTest {
     @Test
     public void deleteTest() throws ApiException {
         Long id = null;
-        BigDecimal delegateQuserId = null;
-        BigDecimal delegateQgroupId = null;
+        Long delegateQuserId = null;
+        Long delegateQgroupId = null;
         api.delete(id, delegateQuserId, delegateQgroupId);
 
         // TODO: test validations
