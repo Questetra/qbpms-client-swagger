@@ -137,7 +137,7 @@ null (empty response body)
 
 <a name="find"></a>
 # **find**
-> QuserWithPrimaryQgroup find(id, email)
+> QuserWithPrimaryQgroupWrapper find(id, email)
 
 Retrieving a User Account
 
@@ -167,7 +167,7 @@ QuserApi apiInstance = new QuserApi();
 Long id = 789L; // Long | 
 String email = "email_example"; // String | 
 try {
-    QuserWithPrimaryQgroup result = apiInstance.find(id, email);
+    QuserWithPrimaryQgroupWrapper result = apiInstance.find(id, email);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling QuserApi#find");
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QuserWithPrimaryQgroup**](QuserWithPrimaryQgroup.md)
+[**QuserWithPrimaryQgroupWrapper**](QuserWithPrimaryQgroupWrapper.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 <a name="self"></a>
 # **self**
-> QuserWithPrimaryQgroup self()
+> QuserWithPrimaryQgroupWrapper self()
 
 Retrieving the user’s own User Account
 
@@ -287,7 +287,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 QuserApi apiInstance = new QuserApi();
 try {
-    QuserWithPrimaryQgroup result = apiInstance.self();
+    QuserWithPrimaryQgroupWrapper result = apiInstance.self();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling QuserApi#self");
@@ -300,7 +300,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**QuserWithPrimaryQgroup**](QuserWithPrimaryQgroup.md)
+[**QuserWithPrimaryQgroupWrapper**](QuserWithPrimaryQgroupWrapper.md)
 
 ### Authorization
 

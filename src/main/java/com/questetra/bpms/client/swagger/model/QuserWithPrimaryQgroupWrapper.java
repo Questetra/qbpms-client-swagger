@@ -19,35 +19,35 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.questetra.bpms.client.swagger.model.Membership;
+import com.questetra.bpms.client.swagger.model.QuserWithPrimaryQgroup;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * MembershipWrapper
+ * QuserWithPrimaryQgroupWrapper
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-17T18:15:42.398+09:00")
-public class MembershipWrapper {
-  @SerializedName("membership")
-  private Membership membership = null;
+public class QuserWithPrimaryQgroupWrapper {
+  @SerializedName("quser")
+  private QuserWithPrimaryQgroup quser = null;
 
-  public MembershipWrapper membership(Membership membership) {
-    this.membership = membership;
+  public QuserWithPrimaryQgroupWrapper quser(QuserWithPrimaryQgroup quser) {
+    this.quser = quser;
     return this;
   }
 
    /**
-   * Get membership
-   * @return membership
+   * Get quser
+   * @return quser
   **/
   @ApiModelProperty(value = "")
-  public Membership getMembership() {
-    return membership;
+  public QuserWithPrimaryQgroup getQuser() {
+    return quser;
   }
 
-  public void setMembership(Membership membership) {
-    this.membership = membership;
+  public void setQuser(QuserWithPrimaryQgroup quser) {
+    this.quser = quser;
   }
 
 
@@ -59,22 +59,22 @@ public class MembershipWrapper {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MembershipWrapper membershipWrapper = (MembershipWrapper) o;
-    return Objects.equals(this.membership, membershipWrapper.membership);
+    QuserWithPrimaryQgroupWrapper quserWithPrimaryQgroupWrapper = (QuserWithPrimaryQgroupWrapper) o;
+    return Objects.equals(this.quser, quserWithPrimaryQgroupWrapper.quser);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(membership);
+    return Objects.hash(quser);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class MembershipWrapper {\n");
+    sb.append("class QuserWithPrimaryQgroupWrapper {\n");
     
-    sb.append("    membership: ").append(toIndentedString(membership)).append("\n");
+    sb.append("    quser: ").append(toIndentedString(quser)).append("\n");
     sb.append("}");
     return sb.toString();
   }

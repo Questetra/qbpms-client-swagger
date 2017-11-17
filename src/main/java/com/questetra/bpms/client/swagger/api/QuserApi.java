@@ -29,7 +29,7 @@ import java.io.IOException;
 
 import com.questetra.bpms.client.swagger.model.Errors;
 import com.questetra.bpms.client.swagger.model.QuserList;
-import com.questetra.bpms.client.swagger.model.QuserWithPrimaryQgroup;
+import com.questetra.bpms.client.swagger.model.QuserWithPrimaryQgroupWrapper;
 import com.questetra.bpms.client.swagger.model.QuserWrapper;
 
 import java.lang.reflect.Type;
@@ -412,11 +412,11 @@ public class QuserApi {
      * Retrieving a User Account
      * @param id  (optional)
      * @param email  (optional)
-     * @return QuserWithPrimaryQgroup
+     * @return QuserWithPrimaryQgroupWrapper
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QuserWithPrimaryQgroup find(Long id, String email) throws ApiException {
-        ApiResponse<QuserWithPrimaryQgroup> resp = findWithHttpInfo(id, email);
+    public QuserWithPrimaryQgroupWrapper find(Long id, String email) throws ApiException {
+        ApiResponse<QuserWithPrimaryQgroupWrapper> resp = findWithHttpInfo(id, email);
         return resp.getData();
     }
 
@@ -425,12 +425,12 @@ public class QuserApi {
      * Retrieving a User Account
      * @param id  (optional)
      * @param email  (optional)
-     * @return ApiResponse&lt;QuserWithPrimaryQgroup&gt;
+     * @return ApiResponse&lt;QuserWithPrimaryQgroupWrapper&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QuserWithPrimaryQgroup> findWithHttpInfo(Long id, String email) throws ApiException {
+    public ApiResponse<QuserWithPrimaryQgroupWrapper> findWithHttpInfo(Long id, String email) throws ApiException {
         com.squareup.okhttp.Call call = findValidateBeforeCall(id, email, null, null);
-        Type localVarReturnType = new TypeToken<QuserWithPrimaryQgroup>(){}.getType();
+        Type localVarReturnType = new TypeToken<QuserWithPrimaryQgroupWrapper>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -443,7 +443,7 @@ public class QuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call findAsync(Long id, String email, final ApiCallback<QuserWithPrimaryQgroup> callback) throws ApiException {
+    public com.squareup.okhttp.Call findAsync(Long id, String email, final ApiCallback<QuserWithPrimaryQgroupWrapper> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -465,7 +465,7 @@ public class QuserApi {
         }
 
         com.squareup.okhttp.Call call = findValidateBeforeCall(id, email, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QuserWithPrimaryQgroup>(){}.getType();
+        Type localVarReturnType = new TypeToken<QuserWithPrimaryQgroupWrapper>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -666,23 +666,23 @@ public class QuserApi {
     /**
      * Retrieving the user’s own User Account
      * Retrieving the user’s own User Account
-     * @return QuserWithPrimaryQgroup
+     * @return QuserWithPrimaryQgroupWrapper
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QuserWithPrimaryQgroup self() throws ApiException {
-        ApiResponse<QuserWithPrimaryQgroup> resp = selfWithHttpInfo();
+    public QuserWithPrimaryQgroupWrapper self() throws ApiException {
+        ApiResponse<QuserWithPrimaryQgroupWrapper> resp = selfWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Retrieving the user’s own User Account
      * Retrieving the user’s own User Account
-     * @return ApiResponse&lt;QuserWithPrimaryQgroup&gt;
+     * @return ApiResponse&lt;QuserWithPrimaryQgroupWrapper&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QuserWithPrimaryQgroup> selfWithHttpInfo() throws ApiException {
+    public ApiResponse<QuserWithPrimaryQgroupWrapper> selfWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = selfValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<QuserWithPrimaryQgroup>(){}.getType();
+        Type localVarReturnType = new TypeToken<QuserWithPrimaryQgroupWrapper>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -693,7 +693,7 @@ public class QuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call selfAsync(final ApiCallback<QuserWithPrimaryQgroup> callback) throws ApiException {
+    public com.squareup.okhttp.Call selfAsync(final ApiCallback<QuserWithPrimaryQgroupWrapper> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -715,7 +715,7 @@ public class QuserApi {
         }
 
         com.squareup.okhttp.Call call = selfValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QuserWithPrimaryQgroup>(){}.getType();
+        Type localVarReturnType = new TypeToken<QuserWithPrimaryQgroupWrapper>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
