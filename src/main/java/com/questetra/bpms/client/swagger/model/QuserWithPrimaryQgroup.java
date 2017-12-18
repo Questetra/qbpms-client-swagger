@@ -20,6 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.questetra.bpms.client.swagger.model.Qgroup;
+import com.questetra.bpms.client.swagger.model.Quser;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -27,7 +28,7 @@ import java.io.IOException;
 /**
  * QuserWithPrimaryQgroup
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-17T18:15:42.398+09:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-12-18T10:26:48.996+09:00")
 public class QuserWithPrimaryQgroup {
   @SerializedName("email")
   private String email = null;
@@ -101,10 +102,10 @@ public class QuserWithPrimaryQgroup {
   }
 
    /**
-   * Main organization
+   * Get primaryQgroup
    * @return primaryQgroup
   **/
-  @ApiModelProperty(value = "Main organization")
+  @ApiModelProperty(value = "")
   public Qgroup getPrimaryQgroup() {
     return primaryQgroup;
   }

@@ -19,6 +19,6 @@ hs_err_pid*
 target
 .gradle
 build
+/.settings/
 /.classpath
 /.project
-/.settings/

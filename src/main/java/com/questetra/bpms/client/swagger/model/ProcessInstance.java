@@ -23,6 +23,7 @@ import com.questetra.bpms.client.swagger.model.ProcessData;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +32,7 @@ import org.joda.time.DateTime;
 /**
  * ProcessInstance
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-17T18:15:42.398+09:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-12-18T10:26:48.996+09:00")
 public class ProcessInstance {
   @SerializedName("processInstanceEndDatetime")
   private DateTime processInstanceEndDatetime = null;
@@ -82,7 +83,7 @@ public class ProcessInstance {
   private Long processModelVersion = null;
 
   @SerializedName("activeTokenNodeName")
-  private String activeTokenNodeName = null;
+  private List<String> activeTokenNodeName = null;
 
   @SerializedName("data")
   private Map<String, ProcessData> data = null;
@@ -375,8 +376,16 @@ public class ProcessInstance {
     this.processModelVersion = processModelVersion;
   }
 
-  public ProcessInstance activeTokenNodeName(String activeTokenNodeName) {
+  public ProcessInstance activeTokenNodeName(List<String> activeTokenNodeName) {
     this.activeTokenNodeName = activeTokenNodeName;
+    return this;
+  }
+
+  public ProcessInstance addActiveTokenNodeNameItem(String activeTokenNodeNameItem) {
+    if (this.activeTokenNodeName == null) {
+      this.activeTokenNodeName = new ArrayList<String>();
+    }
+    this.activeTokenNodeName.add(activeTokenNodeNameItem);
     return this;
   }
 
@@ -384,12 +393,12 @@ public class ProcessInstance {
    * Node name where the active token staying
    * @return activeTokenNodeName
   **/
-  @ApiModelProperty(example = "Category 1", value = "Node name where the active token staying")
-  public String getActiveTokenNodeName() {
+  @ApiModelProperty(value = "Node name where the active token staying")
+  public List<String> getActiveTokenNodeName() {
     return activeTokenNodeName;
   }
 
-  public void setActiveTokenNodeName(String activeTokenNodeName) {
+  public void setActiveTokenNodeName(List<String> activeTokenNodeName) {
     this.activeTokenNodeName = activeTokenNodeName;
   }
 

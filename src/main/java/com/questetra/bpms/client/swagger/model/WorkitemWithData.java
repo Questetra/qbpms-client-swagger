@@ -32,7 +32,7 @@ import org.joda.time.DateTime;
 /**
  * WorkitemWithData
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-17T18:15:42.398+09:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-12-18T10:26:48.996+09:00")
 public class WorkitemWithData {
   @SerializedName("id")
   private Integer id = null;
@@ -51,6 +51,9 @@ public class WorkitemWithData {
 
   @SerializedName("allocatedQgroupName")
   private String allocatedQgroupName = null;
+
+  @SerializedName("data")
+  private Map<String, ProcessData> data = null;
 
   @SerializedName("endDatetime")
   private DateTime endDatetime = null;
@@ -132,9 +135,6 @@ public class WorkitemWithData {
 
   @SerializedName("read")
   private Boolean read = null;
-
-  @SerializedName("data")
-  private Map<String, ProcessData> data = null;
 
   public WorkitemWithData id(Integer id) {
     this.id = id;
@@ -242,6 +242,32 @@ public class WorkitemWithData {
 
   public void setAllocatedQgroupName(String allocatedQgroupName) {
     this.allocatedQgroupName = allocatedQgroupName;
+  }
+
+  public WorkitemWithData data(Map<String, ProcessData> data) {
+    this.data = data;
+    return this;
+  }
+
+  public WorkitemWithData putDataItem(String key, ProcessData dataItem) {
+    if (this.data == null) {
+      this.data = new HashMap<String, ProcessData>();
+    }
+    this.data.put(key, dataItem);
+    return this;
+  }
+
+   /**
+   * Get data
+   * @return data
+  **/
+  @ApiModelProperty(example = "{\"0\":{\"dataType\":\"STRING\",\"id\":138970,\"name\":\"sample name\",\"processDataDefinitionNumber\":0,\"subType\":null,\"value\":\"sample string\",\"viewOrder\":1}}", value = "")
+  public Map<String, ProcessData> getData() {
+    return data;
+  }
+
+  public void setData(Map<String, ProcessData> data) {
+    this.data = data;
   }
 
   public WorkitemWithData endDatetime(DateTime endDatetime) {
@@ -730,32 +756,6 @@ public class WorkitemWithData {
     this.read = read;
   }
 
-  public WorkitemWithData data(Map<String, ProcessData> data) {
-    this.data = data;
-    return this;
-  }
-
-  public WorkitemWithData putDataItem(String key, ProcessData dataItem) {
-    if (this.data == null) {
-      this.data = new HashMap<String, ProcessData>();
-    }
-    this.data.put(key, dataItem);
-    return this;
-  }
-
-   /**
-   * Get data
-   * @return data
-  **/
-  @ApiModelProperty(example = "{\"0\":{\"dataType\":\"STRING\",\"id\":138970,\"name\":\"sample name\",\"processDataDefinitionNumber\":0,\"subType\":null,\"value\":\"sample string\",\"viewOrder\":1}}", value = "")
-  public Map<String, ProcessData> getData() {
-    return data;
-  }
-
-  public void setData(Map<String, ProcessData> data) {
-    this.data = data;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -772,6 +772,7 @@ public class WorkitemWithData {
         Objects.equals(this.allocatedQuserName, workitemWithData.allocatedQuserName) &&
         Objects.equals(this.allocatedQgroupId, workitemWithData.allocatedQgroupId) &&
         Objects.equals(this.allocatedQgroupName, workitemWithData.allocatedQgroupName) &&
+        Objects.equals(this.data, workitemWithData.data) &&
         Objects.equals(this.endDatetime, workitemWithData.endDatetime) &&
         Objects.equals(this.nodeName, workitemWithData.nodeName) &&
         Objects.equals(this.nodeNumber, workitemWithData.nodeNumber) &&
@@ -798,13 +799,12 @@ public class WorkitemWithData {
         Objects.equals(this.swimlaneType, workitemWithData.swimlaneType) &&
         Objects.equals(this.timeLimitDatetime, workitemWithData.timeLimitDatetime) &&
         Objects.equals(this.starred, workitemWithData.starred) &&
-        Objects.equals(this.read, workitemWithData.read) &&
-        Objects.equals(this.data, workitemWithData.data);
+        Objects.equals(this.read, workitemWithData.read);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, allocateDatetime, allocatedQuserId, allocatedQuserName, allocatedQgroupId, allocatedQgroupName, endDatetime, nodeName, nodeNumber, offerDatetime, processInstanceEndDatetime, processInstanceIdForView, processInstanceId, processInstanceSequenceNumber, processInstanceInitQgroupId, processInstanceInitQgroupName, processInstanceInitQuserId, processInstanceInitQuserName, processInstanceStartDatetime, processInstanceState, processInstanceDebug, processInstanceTitle, processModelInfoId, processModelInfoName, processModelInfoCategory, processModelVersion, startDatetime, state, failType, swimlaneType, timeLimitDatetime, starred, read, data);
+    return Objects.hash(id, allocateDatetime, allocatedQuserId, allocatedQuserName, allocatedQgroupId, allocatedQgroupName, data, endDatetime, nodeName, nodeNumber, offerDatetime, processInstanceEndDatetime, processInstanceIdForView, processInstanceId, processInstanceSequenceNumber, processInstanceInitQgroupId, processInstanceInitQgroupName, processInstanceInitQuserId, processInstanceInitQuserName, processInstanceStartDatetime, processInstanceState, processInstanceDebug, processInstanceTitle, processModelInfoId, processModelInfoName, processModelInfoCategory, processModelVersion, startDatetime, state, failType, swimlaneType, timeLimitDatetime, starred, read);
   }
 
 
@@ -819,6 +819,7 @@ public class WorkitemWithData {
     sb.append("    allocatedQuserName: ").append(toIndentedString(allocatedQuserName)).append("\n");
     sb.append("    allocatedQgroupId: ").append(toIndentedString(allocatedQgroupId)).append("\n");
     sb.append("    allocatedQgroupName: ").append(toIndentedString(allocatedQgroupName)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    endDatetime: ").append(toIndentedString(endDatetime)).append("\n");
     sb.append("    nodeName: ").append(toIndentedString(nodeName)).append("\n");
     sb.append("    nodeNumber: ").append(toIndentedString(nodeNumber)).append("\n");
@@ -846,7 +847,6 @@ public class WorkitemWithData {
     sb.append("    timeLimitDatetime: ").append(toIndentedString(timeLimitDatetime)).append("\n");
     sb.append("    starred: ").append(toIndentedString(starred)).append("\n");
     sb.append("    read: ").append(toIndentedString(read)).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -19,15 +19,19 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.questetra.bpms.client.swagger.model.ProcessData;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import org.joda.time.DateTime;
 
 /**
  * Workitem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-17T18:15:42.398+09:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-12-18T10:26:48.996+09:00")
 public class Workitem {
   @SerializedName("id")
   private Integer id = null;
@@ -46,6 +50,9 @@ public class Workitem {
 
   @SerializedName("allocatedQgroupName")
   private String allocatedQgroupName = null;
+
+  @SerializedName("data")
+  private Map<String, ProcessData> data = null;
 
   @SerializedName("endDatetime")
   private DateTime endDatetime = null;
@@ -234,6 +241,32 @@ public class Workitem {
 
   public void setAllocatedQgroupName(String allocatedQgroupName) {
     this.allocatedQgroupName = allocatedQgroupName;
+  }
+
+  public Workitem data(Map<String, ProcessData> data) {
+    this.data = data;
+    return this;
+  }
+
+  public Workitem putDataItem(String key, ProcessData dataItem) {
+    if (this.data == null) {
+      this.data = new HashMap<String, ProcessData>();
+    }
+    this.data.put(key, dataItem);
+    return this;
+  }
+
+   /**
+   * Get data
+   * @return data
+  **/
+  @ApiModelProperty(value = "")
+  public Map<String, ProcessData> getData() {
+    return data;
+  }
+
+  public void setData(Map<String, ProcessData> data) {
+    this.data = data;
   }
 
   public Workitem endDatetime(DateTime endDatetime) {
@@ -738,6 +771,7 @@ public class Workitem {
         Objects.equals(this.allocatedQuserName, workitem.allocatedQuserName) &&
         Objects.equals(this.allocatedQgroupId, workitem.allocatedQgroupId) &&
         Objects.equals(this.allocatedQgroupName, workitem.allocatedQgroupName) &&
+        Objects.equals(this.data, workitem.data) &&
         Objects.equals(this.endDatetime, workitem.endDatetime) &&
         Objects.equals(this.nodeName, workitem.nodeName) &&
         Objects.equals(this.nodeNumber, workitem.nodeNumber) &&
@@ -769,7 +803,7 @@ public class Workitem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, allocateDatetime, allocatedQuserId, allocatedQuserName, allocatedQgroupId, allocatedQgroupName, endDatetime, nodeName, nodeNumber, offerDatetime, processInstanceEndDatetime, processInstanceIdForView, processInstanceId, processInstanceSequenceNumber, processInstanceInitQgroupId, processInstanceInitQgroupName, processInstanceInitQuserId, processInstanceInitQuserName, processInstanceStartDatetime, processInstanceState, processInstanceDebug, processInstanceTitle, processModelInfoId, processModelInfoName, processModelInfoCategory, processModelVersion, startDatetime, state, failType, swimlaneType, timeLimitDatetime, starred, read);
+    return Objects.hash(id, allocateDatetime, allocatedQuserId, allocatedQuserName, allocatedQgroupId, allocatedQgroupName, data, endDatetime, nodeName, nodeNumber, offerDatetime, processInstanceEndDatetime, processInstanceIdForView, processInstanceId, processInstanceSequenceNumber, processInstanceInitQgroupId, processInstanceInitQgroupName, processInstanceInitQuserId, processInstanceInitQuserName, processInstanceStartDatetime, processInstanceState, processInstanceDebug, processInstanceTitle, processModelInfoId, processModelInfoName, processModelInfoCategory, processModelVersion, startDatetime, state, failType, swimlaneType, timeLimitDatetime, starred, read);
   }
 
 
@@ -784,6 +818,7 @@ public class Workitem {
     sb.append("    allocatedQuserName: ").append(toIndentedString(allocatedQuserName)).append("\n");
     sb.append("    allocatedQgroupId: ").append(toIndentedString(allocatedQgroupId)).append("\n");
     sb.append("    allocatedQgroupName: ").append(toIndentedString(allocatedQgroupName)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    endDatetime: ").append(toIndentedString(endDatetime)).append("\n");
     sb.append("    nodeName: ").append(toIndentedString(nodeName)).append("\n");
     sb.append("    nodeNumber: ").append(toIndentedString(nodeNumber)).append("\n");

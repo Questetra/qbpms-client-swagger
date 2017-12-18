@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **processModelInfoName** | **String** | Process Model name |  [optional]
 **processModelInfoCategory** | **String** | Category of the Process Model |  [optional]
 **processModelVersion** | **Long** | Version of the Process Model |  [optional]
-**activeTokenNodeName** | **String** | Node name where the active token staying |  [optional]
+**activeTokenNodeName** | **List&lt;String&gt;** | Node name where the active token staying |  [optional]
 **data** | [**Map&lt;String, ProcessData&gt;**](ProcessData.md) |  |  [optional]
 
 
