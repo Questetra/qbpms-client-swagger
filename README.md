@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.questetra</groupId>
     <artifactId>bpms.client.swagger</artifactId>
-    <version>11.5.0</version>
+    <version>11.5.1</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.questetra:bpms.client.swagger:11.5.0"
+compile "com.questetra:bpms.client.swagger:11.5.1"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/bpms.client.swagger-11.5.0.jar
+* target/bpms.client.swagger-11.5.1.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -70,6 +70,8 @@ public class ItemCacheApiExample {
 
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
+        // Set Base URL
+        defaultClient.setBasePath("https://online-demo-en.questetra.net/");
         
         // Configure HTTP basic authorization: basic
         HttpBasicAuth basic = (HttpBasicAuth) defaultClient.getAuthentication("basic");
@@ -77,8 +79,8 @@ public class ItemCacheApiExample {
         basic.setPassword("YOUR PASSWORD");
 
         // Configure OAuth2 access token for authorization: oauth2
-        OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-        oauth2.setAccessToken("YOUR ACCESS TOKEN");
+        // OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+        // oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
         ItemCacheApi apiInstance = new ItemCacheApi();
         String url = "url_example"; // String | 
