@@ -19,7 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.questetra.bpms.client.swagger.model.Activity;
+import com.questetra.bpms.client.swagger.model.ProcessModelInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -27,17 +27,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ActivityList
+ * ProcessModelInfoList
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-28T13:37:26.457+09:00")
-public class ActivityList {
+public class ProcessModelInfoList {
   @SerializedName("count")
   private Integer count = null;
 
-  @SerializedName("startableActivities")
-  private List<Activity> startableActivities = null;
+  @SerializedName("processModelInfos")
+  private List<ProcessModelInfo> processModelInfos = null;
 
-  public ActivityList count(Integer count) {
+  public ProcessModelInfoList count(Integer count) {
     this.count = count;
     return this;
   }
@@ -55,30 +55,30 @@ public class ActivityList {
     this.count = count;
   }
 
-  public ActivityList startableActivities(List<Activity> startableActivities) {
-    this.startableActivities = startableActivities;
+  public ProcessModelInfoList processModelInfos(List<ProcessModelInfo> processModelInfos) {
+    this.processModelInfos = processModelInfos;
     return this;
   }
 
-  public ActivityList addStartableActivitiesItem(Activity startableActivitiesItem) {
-    if (this.startableActivities == null) {
-      this.startableActivities = new ArrayList<Activity>();
+  public ProcessModelInfoList addProcessModelInfosItem(ProcessModelInfo processModelInfosItem) {
+    if (this.processModelInfos == null) {
+      this.processModelInfos = new ArrayList<ProcessModelInfo>();
     }
-    this.startableActivities.add(startableActivitiesItem);
+    this.processModelInfos.add(processModelInfosItem);
     return this;
   }
 
    /**
-   * Get startableActivities
-   * @return startableActivities
+   * Get processModelInfos
+   * @return processModelInfos
   **/
   @ApiModelProperty(value = "")
-  public List<Activity> getStartableActivities() {
-    return startableActivities;
+  public List<ProcessModelInfo> getProcessModelInfos() {
+    return processModelInfos;
   }
 
-  public void setStartableActivities(List<Activity> startableActivities) {
-    this.startableActivities = startableActivities;
+  public void setProcessModelInfos(List<ProcessModelInfo> processModelInfos) {
+    this.processModelInfos = processModelInfos;
   }
 
 
@@ -90,24 +90,24 @@ public class ActivityList {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ActivityList activityList = (ActivityList) o;
-    return Objects.equals(this.count, activityList.count) &&
-        Objects.equals(this.startableActivities, activityList.startableActivities);
+    ProcessModelInfoList processModelInfoList = (ProcessModelInfoList) o;
+    return Objects.equals(this.count, processModelInfoList.count) &&
+        Objects.equals(this.processModelInfos, processModelInfoList.processModelInfos);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(count, startableActivities);
+    return Objects.hash(count, processModelInfos);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ActivityList {\n");
+    sb.append("class ProcessModelInfoList {\n");
     
     sb.append("    count: ").append(toIndentedString(count)).append("\n");
-    sb.append("    startableActivities: ").append(toIndentedString(startableActivities)).append("\n");
+    sb.append("    processModelInfos: ").append(toIndentedString(processModelInfos)).append("\n");
     sb.append("}");
     return sb.toString();
   }

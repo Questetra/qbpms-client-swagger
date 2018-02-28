@@ -313,7 +313,7 @@ This endpoint does not need any parameter.
 
 <a name="update"></a>
 # **update**
-> QuserWrapper update(id, name, email, password, primaryQgroupId)
+> QuserWithPrimaryQgroupWrapper update(id, name, email, password, primaryQgroupId)
 
 Updating a User Account
 
@@ -346,7 +346,7 @@ String email = "email_example"; // String |
 String password = "password_example"; // String | 
 Long primaryQgroupId = 789L; // Long | 
 try {
-    QuserWrapper result = apiInstance.update(id, name, email, password, primaryQgroupId);
+    QuserWithPrimaryQgroupWrapper result = apiInstance.update(id, name, email, password, primaryQgroupId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling QuserApi#update");
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**QuserWrapper**](QuserWrapper.md)
+[**QuserWithPrimaryQgroupWrapper**](QuserWithPrimaryQgroupWrapper.md)
 
 ### Authorization
 
