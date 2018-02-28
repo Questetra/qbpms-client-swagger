@@ -60,7 +60,7 @@
 		<maven-plugin-version>1.0.0</maven-plugin-version>
 		<junit-version>4.12</junit-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.version>11.5.1</project.version>
+		<project.version>11.6.0</project.version>
 	</properties>
 	<build>
 		<plugins>
@@ -175,7 +175,7 @@
 									<goal>generate</goal>
 								</goals>
 								<configuration>
-									<inputSpec>https://bpm.questetra.net/Swagger/doc</inputSpec>
+									<inputSpec>https://online-demo-en.questetra.net/Swagger/doc</inputSpec>
 									<language>java</language>
 									<output>.</output>
 									<invokerPackage>com.questetra.bpms.client.swagger</invokerPackage>
