@@ -1,6 +1,6 @@
 # QgroupApi
 
-All URIs are relative to *https://online-demo-en.questetra.net/*
+All URIs are relative to *https://online-demo-en.questetra.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
