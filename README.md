@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.questetra</groupId>
     <artifactId>bpms.client.swagger</artifactId>
-    <version>11.6.0</version>
+    <version>11.7.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.questetra:bpms.client.swagger:11.6.0"
+compile "com.questetra:bpms.client.swagger:11.7.0"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/bpms.client.swagger-11.6.0.jar
+* target/bpms.client.swagger-11.7.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -109,8 +109,6 @@ Class | Method | HTTP request | Description
 *MembershipApi* | [**listByQgroup**](docs/MembershipApi.md#listByQgroup) | **GET** /API/User/Membership/listByQgroup | Retrieving all Members of an Organization
 *MembershipApi* | [**listByQuser**](docs/MembershipApi.md#listByQuser) | **GET** /API/User/Membership/listByQuser | Retrieving all Organizations for a User
 *MembershipApi* | [**update**](docs/MembershipApi.md#update) | **POST** /API/UGA/Membership/update | Assigning a Leader to an Organization
-*MessageCatchEventApi* | [**receive**](docs/MessageCatchEventApi.md#receive) | **POST** /System/Event/IntermediateMessage/{processModelInfoId}/{nodeNumber}/receive | 
-*MessageCatchEventApi* | [**start**](docs/MessageCatchEventApi.md#start) | **POST** /System/Event/MessageStart/{processModelInfoId}/{nodeNumber}/start | 
 *ProcessAuthorityApi* | [**addToQgroup**](docs/ProcessAuthorityApi.md#addToQgroup) | **POST** /API/Admin/ProcessAuthority/addToQgroup | Granting a Process Privilege to an Organization
 *ProcessAuthorityApi* | [**addToQrole**](docs/ProcessAuthorityApi.md#addToQrole) | **POST** /API/Admin/ProcessAuthority/addToQrole | Granting a Process Privilege to a Role
 *ProcessAuthorityApi* | [**addToQuser**](docs/ProcessAuthorityApi.md#addToQuser) | **POST** /API/Admin/ProcessAuthority/addToQuser | Granting a Process Privilege to a User
