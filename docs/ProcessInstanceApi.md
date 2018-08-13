@@ -333,6 +333,7 @@ Creating a Process Instance
 //import com.questetra.bpms.client.swagger.Configuration;
 //import com.questetra.bpms.client.swagger.auth.*;
 //import com.questetra.bpms.client.swagger.api.ProcessInstanceApi;
+//import com.questetra.bpms.client.swagger.model.WorkitemWrapper;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
