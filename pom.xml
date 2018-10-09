@@ -60,7 +60,7 @@
 		<maven-plugin-version>1.0.0</maven-plugin-version>
 		<junit-version>4.12</junit-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.version>11.7.0</project.version>
+		<project.version>11.8.0</project.version>
 	</properties>
 	<build>
 		<plugins>

@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**addToQuser**](SystemAuthorityApi.md#addToQuser) | **POST** /API/Admin/SystemAuthority/addToQuser | Granting a System Privilege to a User
 [**delete**](SystemAuthorityApi.md#delete) | **POST** /API/Admin/SystemAuthority/delete | Deleting a System Privilege
 [**list**](SystemAuthorityApi.md#list) | **GET** /API/Admin/SystemAuthority/list | Retrieving a List of System Privilege
+[**self**](SystemAuthorityApi.md#self) | **GET** /API/User/SystemAuthority/self | Retrieving a List of the user&#39;s own System Privileges
 
 
 <a name="addToQgroup"></a>
@@ -300,6 +301,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SystemAuthorityList**](SystemAuthorityList.md)
+
+### Authorization
+
+[basic](../README.md#basic), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="self"></a>
+# **self**
+> QuserSystemAuthorityList self()
+
+Retrieving a List of the user&#39;s own System Privileges
+
+Retrieving a List of the user&#39;s own System Privileges
+
+### Example
+```java
+// Import classes:
+//import com.questetra.bpms.client.swagger.ApiClient;
+//import com.questetra.bpms.client.swagger.ApiException;
+//import com.questetra.bpms.client.swagger.Configuration;
+//import com.questetra.bpms.client.swagger.auth.*;
+//import com.questetra.bpms.client.swagger.api.SystemAuthorityApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: basic
+HttpBasicAuth basic = (HttpBasicAuth) defaultClient.getAuthentication("basic");
+basic.setUsername("YOUR USERNAME");
+basic.setPassword("YOUR PASSWORD");
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+SystemAuthorityApi apiInstance = new SystemAuthorityApi();
+try {
+    QuserSystemAuthorityList result = apiInstance.self();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SystemAuthorityApi#self");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**QuserSystemAuthorityList**](QuserSystemAuthorityList.md)
 
 ### Authorization
 

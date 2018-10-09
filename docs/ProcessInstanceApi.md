@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete**](ProcessInstanceApi.md#delete) | **POST** /API/OR/ProcessInstance/delete | Deleting Process
 [**downloadFile**](ProcessInstanceApi.md#downloadFile) | **GET** /API/OR/ProcessInstance/File/download | Downloading File type Process Data
-[**list**](ProcessInstanceApi.md#list) | **GET** /API/OR/ProcessInstance/list | Querying for Task records operated by the User
-[**listCsv**](ProcessInstanceApi.md#listCsv) | **GET** /API/OR/ProcessInstance/listCsv | Querying for all Process Instances records
-[**listCsvUtf16**](ProcessInstanceApi.md#listCsvUtf16) | **GET** /API/OR/ProcessInstance/listCsvUtf16 | Querying for all Process Instances records
+[**list**](ProcessInstanceApi.md#list) | **GET** /API/OR/ProcessInstance/list | Querying for Process Instance records operated by the User
+[**listCsv**](ProcessInstanceApi.md#listCsv) | **GET** /API/OR/ProcessInstance/listCsv | Querying for Process Instance records operated by the User
+[**listCsvUtf16**](ProcessInstanceApi.md#listCsvUtf16) | **GET** /API/OR/ProcessInstance/listCsvUtf16 | Querying for Process Instance records operated by the User
 [**startProcessInstance**](ProcessInstanceApi.md#startProcessInstance) | **POST** /API/PE/ProcessInstance/start | Creating a Process Instance
 [**stop**](ProcessInstanceApi.md#stop) | **POST** /API/OR/ProcessInstance/stop | Terminating Process
 [**view**](ProcessInstanceApi.md#view) | **GET** /API/OR/ProcessInstance/view | Retrieving Process Instance
@@ -135,9 +135,9 @@ Name | Type | Description  | Notes
 # **list**
 > ProcessInstanceList list(criteria, limit, start)
 
-Querying for Task records operated by the User
+Querying for Process Instance records operated by the User
 
-Querying for Task records operated by the User
+Querying for Process Instance records operated by the User
 
 ### Example
 ```java
@@ -197,9 +197,9 @@ Name | Type | Description  | Notes
 # **listCsv**
 > String listCsv(criteria, limit, start)
 
-Querying for all Process Instances records
+Querying for Process Instance records operated by the User
 
-Querying for all Process Instances records
+Querying for Process Instance records operated by the User
 
 ### Example
 ```java
@@ -259,9 +259,9 @@ Name | Type | Description  | Notes
 # **listCsvUtf16**
 > String listCsvUtf16(criteria, limit, start)
 
-Querying for all Process Instances records
+Querying for Process Instance records operated by the User
 
-Querying for all Process Instances records
+Querying for Process Instance records operated by the User
 
 ### Example
 ```java
