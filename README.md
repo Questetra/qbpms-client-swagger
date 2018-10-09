@@ -116,13 +116,15 @@ Class | Method | HTTP request | Description
 *ProcessAuthorityApi* | [**list**](docs/ProcessAuthorityApi.md#list) | **GET** /API/Admin/ProcessAuthority/list | Retrieving a List of Process Privilege
 *ProcessInstanceApi* | [**delete**](docs/ProcessInstanceApi.md#delete) | **POST** /API/OR/ProcessInstance/delete | Deleting Process
 *ProcessInstanceApi* | [**downloadFile**](docs/ProcessInstanceApi.md#downloadFile) | **GET** /API/OR/ProcessInstance/File/download | Downloading File type Process Data
-*ProcessInstanceApi* | [**list**](docs/ProcessInstanceApi.md#list) | **GET** /API/OR/ProcessInstance/list | Querying for Task records operated by the User
-*ProcessInstanceApi* | [**listCsv**](docs/ProcessInstanceApi.md#listCsv) | **GET** /API/OR/ProcessInstance/listCsv | Querying for all Process Instances records
-*ProcessInstanceApi* | [**listCsvUtf16**](docs/ProcessInstanceApi.md#listCsvUtf16) | **GET** /API/OR/ProcessInstance/listCsvUtf16 | Querying for all Process Instances records
+*ProcessInstanceApi* | [**list**](docs/ProcessInstanceApi.md#list) | **GET** /API/OR/ProcessInstance/list | Querying for Process Instance records operated by the User
+*ProcessInstanceApi* | [**listCsv**](docs/ProcessInstanceApi.md#listCsv) | **GET** /API/OR/ProcessInstance/listCsv | Querying for Process Instance records operated by the User
+*ProcessInstanceApi* | [**listCsvUtf16**](docs/ProcessInstanceApi.md#listCsvUtf16) | **GET** /API/OR/ProcessInstance/listCsvUtf16 | Querying for Process Instance records operated by the User
 *ProcessInstanceApi* | [**startProcessInstance**](docs/ProcessInstanceApi.md#startProcessInstance) | **POST** /API/PE/ProcessInstance/start | Creating a Process Instance
 *ProcessInstanceApi* | [**stop**](docs/ProcessInstanceApi.md#stop) | **POST** /API/OR/ProcessInstance/stop | Terminating Process
 *ProcessInstanceApi* | [**view**](docs/ProcessInstanceApi.md#view) | **GET** /API/OR/ProcessInstance/view | Retrieving Process Instance
+*ProcessModelApi* | [**listProcessModel**](docs/ProcessModelApi.md#listProcessModel) | **GET** /API/Admin/ProcessModel/list | Retrieving a List of Process Models
 *ProcessModelApi* | [**listStartableProcessModel**](docs/ProcessModelApi.md#listStartableProcessModel) | **GET** /API/PE/ProcessModel/listStartable | Retrieving a List of startable Workflows
+*ProcessModelApi* | [**releaseProcessModel**](docs/ProcessModelApi.md#releaseProcessModel) | **POST** /API/PMM/ProcessModel/{processModelInfoId}/release | Release process model
 *QgroupApi* | [**add**](docs/QgroupApi.md#add) | **POST** /API/UGA/Qgroup/add | Creating an Organization Unit
 *QgroupApi* | [**delete**](docs/QgroupApi.md#delete) | **POST** /API/UGA/Qgroup/delete | Deleting an Organization Unit
 *QgroupApi* | [**find**](docs/QgroupApi.md#find) | **GET** /API/User/Qgroup/find | Retrieving an Organization Unit
@@ -148,6 +150,7 @@ Class | Method | HTTP request | Description
 *SystemAuthorityApi* | [**addToQuser**](docs/SystemAuthorityApi.md#addToQuser) | **POST** /API/Admin/SystemAuthority/addToQuser | Granting a System Privilege to a User
 *SystemAuthorityApi* | [**delete**](docs/SystemAuthorityApi.md#delete) | **POST** /API/Admin/SystemAuthority/delete | Deleting a System Privilege
 *SystemAuthorityApi* | [**list**](docs/SystemAuthorityApi.md#list) | **GET** /API/Admin/SystemAuthority/list | Retrieving a List of System Privilege
+*SystemAuthorityApi* | [**self**](docs/SystemAuthorityApi.md#self) | **GET** /API/User/SystemAuthority/self | Retrieving a List of the user&#39;s own System Privileges
 *WorkitemApi* | [**addStar**](docs/WorkitemApi.md#addStar) | **POST** /API/OR/Workitem/Star/add | Adding a Star to a Task
 *WorkitemApi* | [**batchAccespWorkitem**](docs/WorkitemApi.md#batchAccespWorkitem) | **POST** /API/PE/Workitem/batchAccept | Accepting a Offered Task
 *WorkitemApi* | [**list**](docs/WorkitemApi.md#list) | **GET** /API/OR/Workitem/list | Querying for Task records operated by the User
@@ -181,6 +184,8 @@ Class | Method | HTTP request | Description
  - [ProcessInstanceList](docs/ProcessInstanceList.md)
  - [ProcessInstanceWrapper](docs/ProcessInstanceWrapper.md)
  - [ProcessModelInfo](docs/ProcessModelInfo.md)
+ - [ProcessModelInfoList](docs/ProcessModelInfoList.md)
+ - [ProcessModelReseaseResult](docs/ProcessModelReseaseResult.md)
  - [Qgroup](docs/Qgroup.md)
  - [QgroupList](docs/QgroupList.md)
  - [QgroupWrapper](docs/QgroupWrapper.md)
@@ -189,10 +194,12 @@ Class | Method | HTTP request | Description
  - [QroleWrapper](docs/QroleWrapper.md)
  - [Quser](docs/Quser.md)
  - [QuserList](docs/QuserList.md)
- - [QuserWithPrimaryQgroup](docs/QuserWithPrimaryQgroup.md)
+ - [QuserSystemAuthorityList](docs/QuserSystemAuthorityList.md)
+ - [QuserWithPrimaryQgroupWrapper](docs/QuserWithPrimaryQgroupWrapper.md)
  - [QuserWrapper](docs/QuserWrapper.md)
  - [RoleMembership](docs/RoleMembership.md)
  - [RoleMembershipList](docs/RoleMembershipList.md)
+ - [RoleMembershipWrapper](docs/RoleMembershipWrapper.md)
  - [SystemAuthority](docs/SystemAuthority.md)
  - [SystemAuthorityList](docs/SystemAuthorityList.md)
  - [SystemAuthorityWrapper](docs/SystemAuthorityWrapper.md)
@@ -203,6 +210,7 @@ Class | Method | HTTP request | Description
  - [WorkitemOpResultWorkitem](docs/WorkitemOpResultWorkitem.md)
  - [WorkitemWithDataList](docs/WorkitemWithDataList.md)
  - [WorkitemWrapper](docs/WorkitemWrapper.md)
+ - [QuserWithPrimaryQgroup](docs/QuserWithPrimaryQgroup.md)
  - [WorkitemWithData](docs/WorkitemWithData.md)
 
 
