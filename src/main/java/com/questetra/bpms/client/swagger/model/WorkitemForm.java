@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * WorkitemForm
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T15:44:52.325+09:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T16:44:27.343+09:00")
 public class WorkitemForm {
   @SerializedName("title")
   private String title = null;

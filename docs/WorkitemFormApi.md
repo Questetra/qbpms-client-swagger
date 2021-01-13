@@ -127,6 +127,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: text/xml
 

@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**processInstanceEndDatetime** | [**OffsetDateTime**](OffsetDateTime.md) | Time of Process completion |  [optional]
+**processInstanceEndDatetime** | **String** | Time of Process completion |  [optional]
 **processInstanceIdForView** | **String** | Process ID as string |  [optional]
 **processInstanceId** | **Long** | Process ID |  [optional]
 **processInstanceSequenceNumber** | **Long** | Sequence Number in Process Model |  [optional]
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **processInstanceInitQgroupName** | **String** | Orgazation name who started the Process |  [optional]
 **processInstanceInitQuserId** | **Long** | User ID who started the Process |  [optional]
 **processInstanceInitQuserName** | **String** | User name who started the Process |  [optional]
-**processInstanceStartDatetime** | [**OffsetDateTime**](OffsetDateTime.md) | Time of Process start |  [optional]
+**processInstanceStartDatetime** | **String** | Time of Process start |  [optional]
 **processInstanceState** | **String** | Process Status |  [optional]
 **processInstanceDebug** | **Boolean** | Debug mode |  [optional]
 **processInstanceTitle** | **String** | Process Title |  [optional]

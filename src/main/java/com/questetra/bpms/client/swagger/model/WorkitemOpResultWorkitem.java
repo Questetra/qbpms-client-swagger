@@ -23,18 +23,17 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.threeten.bp.OffsetDateTime;
 
 /**
  * WorkitemOpResultWorkitem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T15:44:52.325+09:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T16:44:27.343+09:00")
 public class WorkitemOpResultWorkitem {
   @SerializedName("id")
   private Integer id = null;
 
   @SerializedName("allocateDatetime")
-  private OffsetDateTime allocateDatetime = null;
+  private String allocateDatetime = null;
 
   @SerializedName("allocatedQuserId")
   private Integer allocatedQuserId = null;
@@ -55,7 +54,7 @@ public class WorkitemOpResultWorkitem {
   private Integer nodeNumber = null;
 
   @SerializedName("offerDatetime")
-  private OffsetDateTime offerDatetime = null;
+  private String offerDatetime = null;
 
   @SerializedName("processInstanceId")
   private Integer processInstanceId = null;
@@ -79,7 +78,7 @@ public class WorkitemOpResultWorkitem {
   private String processInstanceInitQuserName = null;
 
   @SerializedName("processInstanceStartDatetime")
-  private OffsetDateTime processInstanceStartDatetime = null;
+  private String processInstanceStartDatetime = null;
 
   @SerializedName("processInstanceState")
   private String processInstanceState = null;
@@ -123,7 +122,7 @@ public class WorkitemOpResultWorkitem {
     this.id = id;
   }
 
-  public WorkitemOpResultWorkitem allocateDatetime(OffsetDateTime allocateDatetime) {
+  public WorkitemOpResultWorkitem allocateDatetime(String allocateDatetime) {
     this.allocateDatetime = allocateDatetime;
     return this;
   }
@@ -133,11 +132,11 @@ public class WorkitemOpResultWorkitem {
    * @return allocateDatetime
   **/
   @ApiModelProperty(example = "2010-08-18T14:03:18+0900", value = "Time of Task allocation")
-  public OffsetDateTime getAllocateDatetime() {
+  public String getAllocateDatetime() {
     return allocateDatetime;
   }
 
-  public void setAllocateDatetime(OffsetDateTime allocateDatetime) {
+  public void setAllocateDatetime(String allocateDatetime) {
     this.allocateDatetime = allocateDatetime;
   }
 
@@ -249,7 +248,7 @@ public class WorkitemOpResultWorkitem {
     this.nodeNumber = nodeNumber;
   }
 
-  public WorkitemOpResultWorkitem offerDatetime(OffsetDateTime offerDatetime) {
+  public WorkitemOpResultWorkitem offerDatetime(String offerDatetime) {
     this.offerDatetime = offerDatetime;
     return this;
   }
@@ -259,11 +258,11 @@ public class WorkitemOpResultWorkitem {
    * @return offerDatetime
   **/
   @ApiModelProperty(example = "2010-08-18T14:03:17+0900", value = "Time of offer")
-  public OffsetDateTime getOfferDatetime() {
+  public String getOfferDatetime() {
     return offerDatetime;
   }
 
-  public void setOfferDatetime(OffsetDateTime offerDatetime) {
+  public void setOfferDatetime(String offerDatetime) {
     this.offerDatetime = offerDatetime;
   }
 
@@ -393,7 +392,7 @@ public class WorkitemOpResultWorkitem {
     this.processInstanceInitQuserName = processInstanceInitQuserName;
   }
 
-  public WorkitemOpResultWorkitem processInstanceStartDatetime(OffsetDateTime processInstanceStartDatetime) {
+  public WorkitemOpResultWorkitem processInstanceStartDatetime(String processInstanceStartDatetime) {
     this.processInstanceStartDatetime = processInstanceStartDatetime;
     return this;
   }
@@ -403,11 +402,11 @@ public class WorkitemOpResultWorkitem {
    * @return processInstanceStartDatetime
   **/
   @ApiModelProperty(example = "2010-08-18T14:03:16+0900", value = "Time of Process start")
-  public OffsetDateTime getProcessInstanceStartDatetime() {
+  public String getProcessInstanceStartDatetime() {
     return processInstanceStartDatetime;
   }
 
-  public void setProcessInstanceStartDatetime(OffsetDateTime processInstanceStartDatetime) {
+  public void setProcessInstanceStartDatetime(String processInstanceStartDatetime) {
     this.processInstanceStartDatetime = processInstanceStartDatetime;
   }
 

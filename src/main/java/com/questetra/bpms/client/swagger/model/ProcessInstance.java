@@ -28,15 +28,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.threeten.bp.OffsetDateTime;
 
 /**
  * ProcessInstance
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T15:44:52.325+09:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T16:44:27.343+09:00")
 public class ProcessInstance {
   @SerializedName("processInstanceEndDatetime")
-  private OffsetDateTime processInstanceEndDatetime = null;
+  private String processInstanceEndDatetime = null;
 
   @SerializedName("processInstanceIdForView")
   private String processInstanceIdForView = null;
@@ -60,7 +59,7 @@ public class ProcessInstance {
   private String processInstanceInitQuserName = null;
 
   @SerializedName("processInstanceStartDatetime")
-  private OffsetDateTime processInstanceStartDatetime = null;
+  private String processInstanceStartDatetime = null;
 
   @SerializedName("processInstanceState")
   private String processInstanceState = null;
@@ -92,7 +91,7 @@ public class ProcessInstance {
   @SerializedName("data")
   private Map<String, ProcessData> data = null;
 
-  public ProcessInstance processInstanceEndDatetime(OffsetDateTime processInstanceEndDatetime) {
+  public ProcessInstance processInstanceEndDatetime(String processInstanceEndDatetime) {
     this.processInstanceEndDatetime = processInstanceEndDatetime;
     return this;
   }
@@ -102,11 +101,11 @@ public class ProcessInstance {
    * @return processInstanceEndDatetime
   **/
   @ApiModelProperty(value = "Time of Process completion")
-  public OffsetDateTime getProcessInstanceEndDatetime() {
+  public String getProcessInstanceEndDatetime() {
     return processInstanceEndDatetime;
   }
 
-  public void setProcessInstanceEndDatetime(OffsetDateTime processInstanceEndDatetime) {
+  public void setProcessInstanceEndDatetime(String processInstanceEndDatetime) {
     this.processInstanceEndDatetime = processInstanceEndDatetime;
   }
 
@@ -236,7 +235,7 @@ public class ProcessInstance {
     this.processInstanceInitQuserName = processInstanceInitQuserName;
   }
 
-  public ProcessInstance processInstanceStartDatetime(OffsetDateTime processInstanceStartDatetime) {
+  public ProcessInstance processInstanceStartDatetime(String processInstanceStartDatetime) {
     this.processInstanceStartDatetime = processInstanceStartDatetime;
     return this;
   }
@@ -246,11 +245,11 @@ public class ProcessInstance {
    * @return processInstanceStartDatetime
   **/
   @ApiModelProperty(example = "2010-08-18T14:03:16+0900", value = "Time of Process start")
-  public OffsetDateTime getProcessInstanceStartDatetime() {
+  public String getProcessInstanceStartDatetime() {
     return processInstanceStartDatetime;
   }
 
-  public void setProcessInstanceStartDatetime(OffsetDateTime processInstanceStartDatetime) {
+  public void setProcessInstanceStartDatetime(String processInstanceStartDatetime) {
     this.processInstanceStartDatetime = processInstanceStartDatetime;
   }
 

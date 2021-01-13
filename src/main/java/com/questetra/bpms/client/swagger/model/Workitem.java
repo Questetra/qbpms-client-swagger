@@ -27,18 +27,17 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.threeten.bp.OffsetDateTime;
 
 /**
  * Workitem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T15:44:52.325+09:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T16:44:27.343+09:00")
 public class Workitem {
   @SerializedName("id")
   private Integer id = null;
 
   @SerializedName("allocateDatetime")
-  private OffsetDateTime allocateDatetime = null;
+  private String allocateDatetime = null;
 
   @SerializedName("allocatedQuserId")
   private Integer allocatedQuserId = null;
@@ -53,7 +52,7 @@ public class Workitem {
   private String allocatedQgroupName = null;
 
   @SerializedName("endDatetime")
-  private OffsetDateTime endDatetime = null;
+  private String endDatetime = null;
 
   @SerializedName("nodeName")
   private String nodeName = null;
@@ -62,10 +61,10 @@ public class Workitem {
   private Integer nodeNumber = null;
 
   @SerializedName("offerDatetime")
-  private OffsetDateTime offerDatetime = null;
+  private String offerDatetime = null;
 
   @SerializedName("processInstanceEndDatetime")
-  private OffsetDateTime processInstanceEndDatetime = null;
+  private String processInstanceEndDatetime = null;
 
   @SerializedName("processInstanceIdForView")
   private String processInstanceIdForView = null;
@@ -89,7 +88,7 @@ public class Workitem {
   private String processInstanceInitQuserName = null;
 
   @SerializedName("processInstanceStartDatetime")
-  private OffsetDateTime processInstanceStartDatetime = null;
+  private String processInstanceStartDatetime = null;
 
   @SerializedName("processInstanceState")
   private String processInstanceState = null;
@@ -113,7 +112,7 @@ public class Workitem {
   private Integer processModelVersion = null;
 
   @SerializedName("startDatetime")
-  private OffsetDateTime startDatetime = null;
+  private String startDatetime = null;
 
   @SerializedName("state")
   private String state = null;
@@ -125,7 +124,7 @@ public class Workitem {
   private String swimlaneType = null;
 
   @SerializedName("timeLimitDatetime")
-  private OffsetDateTime timeLimitDatetime = null;
+  private String timeLimitDatetime = null;
 
   @SerializedName("starred")
   private Boolean starred = null;
@@ -154,7 +153,7 @@ public class Workitem {
     this.id = id;
   }
 
-  public Workitem allocateDatetime(OffsetDateTime allocateDatetime) {
+  public Workitem allocateDatetime(String allocateDatetime) {
     this.allocateDatetime = allocateDatetime;
     return this;
   }
@@ -164,11 +163,11 @@ public class Workitem {
    * @return allocateDatetime
   **/
   @ApiModelProperty(example = "2010-08-18T14:03:18+0900", value = "Time of Task allocation")
-  public OffsetDateTime getAllocateDatetime() {
+  public String getAllocateDatetime() {
     return allocateDatetime;
   }
 
-  public void setAllocateDatetime(OffsetDateTime allocateDatetime) {
+  public void setAllocateDatetime(String allocateDatetime) {
     this.allocateDatetime = allocateDatetime;
   }
 
@@ -244,7 +243,7 @@ public class Workitem {
     this.allocatedQgroupName = allocatedQgroupName;
   }
 
-  public Workitem endDatetime(OffsetDateTime endDatetime) {
+  public Workitem endDatetime(String endDatetime) {
     this.endDatetime = endDatetime;
     return this;
   }
@@ -254,11 +253,11 @@ public class Workitem {
    * @return endDatetime
   **/
   @ApiModelProperty(value = "Time of Task completion")
-  public OffsetDateTime getEndDatetime() {
+  public String getEndDatetime() {
     return endDatetime;
   }
 
-  public void setEndDatetime(OffsetDateTime endDatetime) {
+  public void setEndDatetime(String endDatetime) {
     this.endDatetime = endDatetime;
   }
 
@@ -298,7 +297,7 @@ public class Workitem {
     this.nodeNumber = nodeNumber;
   }
 
-  public Workitem offerDatetime(OffsetDateTime offerDatetime) {
+  public Workitem offerDatetime(String offerDatetime) {
     this.offerDatetime = offerDatetime;
     return this;
   }
@@ -308,15 +307,15 @@ public class Workitem {
    * @return offerDatetime
   **/
   @ApiModelProperty(example = "2010-08-18T14:03:17+0900", value = "Time of offer")
-  public OffsetDateTime getOfferDatetime() {
+  public String getOfferDatetime() {
     return offerDatetime;
   }
 
-  public void setOfferDatetime(OffsetDateTime offerDatetime) {
+  public void setOfferDatetime(String offerDatetime) {
     this.offerDatetime = offerDatetime;
   }
 
-  public Workitem processInstanceEndDatetime(OffsetDateTime processInstanceEndDatetime) {
+  public Workitem processInstanceEndDatetime(String processInstanceEndDatetime) {
     this.processInstanceEndDatetime = processInstanceEndDatetime;
     return this;
   }
@@ -326,11 +325,11 @@ public class Workitem {
    * @return processInstanceEndDatetime
   **/
   @ApiModelProperty(value = "Time of Process completion")
-  public OffsetDateTime getProcessInstanceEndDatetime() {
+  public String getProcessInstanceEndDatetime() {
     return processInstanceEndDatetime;
   }
 
-  public void setProcessInstanceEndDatetime(OffsetDateTime processInstanceEndDatetime) {
+  public void setProcessInstanceEndDatetime(String processInstanceEndDatetime) {
     this.processInstanceEndDatetime = processInstanceEndDatetime;
   }
 
@@ -460,7 +459,7 @@ public class Workitem {
     this.processInstanceInitQuserName = processInstanceInitQuserName;
   }
 
-  public Workitem processInstanceStartDatetime(OffsetDateTime processInstanceStartDatetime) {
+  public Workitem processInstanceStartDatetime(String processInstanceStartDatetime) {
     this.processInstanceStartDatetime = processInstanceStartDatetime;
     return this;
   }
@@ -470,11 +469,11 @@ public class Workitem {
    * @return processInstanceStartDatetime
   **/
   @ApiModelProperty(example = "2010-08-18T14:03:16+0900", value = "Time of Process start")
-  public OffsetDateTime getProcessInstanceStartDatetime() {
+  public String getProcessInstanceStartDatetime() {
     return processInstanceStartDatetime;
   }
 
-  public void setProcessInstanceStartDatetime(OffsetDateTime processInstanceStartDatetime) {
+  public void setProcessInstanceStartDatetime(String processInstanceStartDatetime) {
     this.processInstanceStartDatetime = processInstanceStartDatetime;
   }
 
@@ -604,7 +603,7 @@ public class Workitem {
     this.processModelVersion = processModelVersion;
   }
 
-  public Workitem startDatetime(OffsetDateTime startDatetime) {
+  public Workitem startDatetime(String startDatetime) {
     this.startDatetime = startDatetime;
     return this;
   }
@@ -614,11 +613,11 @@ public class Workitem {
    * @return startDatetime
   **/
   @ApiModelProperty(value = "Time of Task start")
-  public OffsetDateTime getStartDatetime() {
+  public String getStartDatetime() {
     return startDatetime;
   }
 
-  public void setStartDatetime(OffsetDateTime startDatetime) {
+  public void setStartDatetime(String startDatetime) {
     this.startDatetime = startDatetime;
   }
 
@@ -676,7 +675,7 @@ public class Workitem {
     this.swimlaneType = swimlaneType;
   }
 
-  public Workitem timeLimitDatetime(OffsetDateTime timeLimitDatetime) {
+  public Workitem timeLimitDatetime(String timeLimitDatetime) {
     this.timeLimitDatetime = timeLimitDatetime;
     return this;
   }
@@ -686,11 +685,11 @@ public class Workitem {
    * @return timeLimitDatetime
   **/
   @ApiModelProperty(value = "Time of Task Deadline")
-  public OffsetDateTime getTimeLimitDatetime() {
+  public String getTimeLimitDatetime() {
     return timeLimitDatetime;
   }
 
-  public void setTimeLimitDatetime(OffsetDateTime timeLimitDatetime) {
+  public void setTimeLimitDatetime(String timeLimitDatetime) {
     this.timeLimitDatetime = timeLimitDatetime;
   }
 

@@ -23,12 +23,11 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.threeten.bp.OffsetDateTime;
 
 /**
  * Activity
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T15:44:52.325+09:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T16:44:27.343+09:00")
 public class Activity {
   @SerializedName("id")
   private Integer id = null;
@@ -40,7 +39,7 @@ public class Activity {
   private Integer nodeNumber = null;
 
   @SerializedName("processModelActivateDatetime")
-  private OffsetDateTime processModelActivateDatetime = null;
+  private String processModelActivateDatetime = null;
 
   @SerializedName("processModelId")
   private Integer processModelId = null;
@@ -117,7 +116,7 @@ public class Activity {
     this.nodeNumber = nodeNumber;
   }
 
-  public Activity processModelActivateDatetime(OffsetDateTime processModelActivateDatetime) {
+  public Activity processModelActivateDatetime(String processModelActivateDatetime) {
     this.processModelActivateDatetime = processModelActivateDatetime;
     return this;
   }
@@ -127,11 +126,11 @@ public class Activity {
    * @return processModelActivateDatetime
   **/
   @ApiModelProperty(example = "2010-01-07T18:13:40+0900", value = "Time of Task start")
-  public OffsetDateTime getProcessModelActivateDatetime() {
+  public String getProcessModelActivateDatetime() {
     return processModelActivateDatetime;
   }
 
-  public void setProcessModelActivateDatetime(OffsetDateTime processModelActivateDatetime) {
+  public void setProcessModelActivateDatetime(String processModelActivateDatetime) {
     this.processModelActivateDatetime = processModelActivateDatetime;
   }
 

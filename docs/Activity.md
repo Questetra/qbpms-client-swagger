@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **Integer** | Task ID |  [optional]
 **nodeName** | **String** | Task name |  [optional]
 **nodeNumber** | **Integer** | Node number |  [optional]
-**processModelActivateDatetime** | [**OffsetDateTime**](OffsetDateTime.md) | Time of Task start |  [optional]
+**processModelActivateDatetime** | **String** | Time of Task start |  [optional]
 **processModelId** | **Integer** | Process Model ID that given to each different version |  [optional]
 **processModelInfoCategory** | **String** | Category of the Process Model |  [optional]
 **processModelInfoId** | **Integer** | Process Model ID that does not change regardless of Version |  [optional]
