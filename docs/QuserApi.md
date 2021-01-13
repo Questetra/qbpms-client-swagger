@@ -1,20 +1,20 @@
 # QuserApi
 
-All URIs are relative to *https://online-demo-en.questetra.net*
+All URIs are relative to *https://192.168.1.12:18443/userweb/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add**](QuserApi.md#add) | **POST** /API/UGA/Quser/add | Creating a User Account
-[**delete**](QuserApi.md#delete) | **POST** /API/UGA/Quser/delete | Deleting a User Account
-[**find**](QuserApi.md#find) | **GET** /API/User/Quser/find | Retrieving a User Account
-[**list**](QuserApi.md#list) | **GET** /API/User/Quser/list | Retrieving a List of Users
-[**self**](QuserApi.md#self) | **GET** /API/User/Quser/self | Retrieving the user’s own User Account
-[**update**](QuserApi.md#update) | **POST** /API/UGA/Quser/update | Updating a User Account
+[**addQuser**](QuserApi.md#addQuser) | **POST** /API/UGA/Quser/add | Creating a User Account
+[**deleteQuser**](QuserApi.md#deleteQuser) | **POST** /API/UGA/Quser/delete | Deleting a User Account
+[**findQuser**](QuserApi.md#findQuser) | **GET** /API/User/Quser/find | Retrieving a User Account
+[**getMySelf**](QuserApi.md#getMySelf) | **GET** /API/User/Quser/self | Retrieving the user’s own User Account
+[**listQusers**](QuserApi.md#listQusers) | **GET** /API/User/Quser/list | Retrieving a List of Users
+[**updateQuser**](QuserApi.md#updateQuser) | **POST** /API/UGA/Quser/update | Updating a User Account
 
 
-<a name="add"></a>
-# **add**
-> QuserWrapper add(name, email, password)
+<a name="addQuser"></a>
+# **addQuser**
+> QuserWrapper addQuser(name, email, password)
 
 Creating a User Account
 
@@ -45,10 +45,10 @@ String name = "name_example"; // String |
 String email = "email_example"; // String | 
 String password = "password_example"; // String | 
 try {
-    QuserWrapper result = apiInstance.add(name, email, password);
+    QuserWrapper result = apiInstance.addQuser(name, email, password);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QuserApi#add");
+    System.err.println("Exception when calling QuserApi#addQuser");
     e.printStackTrace();
 }
 ```
@@ -74,9 +74,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
-<a name="delete"></a>
-# **delete**
-> delete(id, delegateQuserId, delegateQgroupId)
+<a name="deleteQuser"></a>
+# **deleteQuser**
+> deleteQuser(id, delegateQuserId, delegateQgroupId)
 
 Deleting a User Account
 
@@ -107,9 +107,9 @@ Long id = 789L; // Long |
 Long delegateQuserId = 789L; // Long | 
 Long delegateQgroupId = 789L; // Long | 
 try {
-    apiInstance.delete(id, delegateQuserId, delegateQgroupId);
+    apiInstance.deleteQuser(id, delegateQuserId, delegateQgroupId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QuserApi#delete");
+    System.err.println("Exception when calling QuserApi#deleteQuser");
     e.printStackTrace();
 }
 ```
@@ -135,9 +135,9 @@ null (empty response body)
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
-<a name="find"></a>
-# **find**
-> QuserWithPrimaryQgroupWrapper find(id, email)
+<a name="findQuser"></a>
+# **findQuser**
+> QuserWithPrimaryQgroupWrapper findQuser(id, email)
 
 Retrieving a User Account
 
@@ -167,10 +167,10 @@ QuserApi apiInstance = new QuserApi();
 Long id = 789L; // Long | 
 String email = "email_example"; // String | 
 try {
-    QuserWithPrimaryQgroupWrapper result = apiInstance.find(id, email);
+    QuserWithPrimaryQgroupWrapper result = apiInstance.findQuser(id, email);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QuserApi#find");
+    System.err.println("Exception when calling QuserApi#findQuser");
     e.printStackTrace();
 }
 ```
@@ -195,9 +195,63 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="list"></a>
-# **list**
-> QuserList list(query, limit, start)
+<a name="getMySelf"></a>
+# **getMySelf**
+> QuserWithPrimaryQgroupWrapper getMySelf()
+
+Retrieving the user’s own User Account
+
+Retrieving the user’s own User Account
+
+### Example
+```java
+// Import classes:
+//import com.questetra.bpms.client.swagger.ApiClient;
+//import com.questetra.bpms.client.swagger.ApiException;
+//import com.questetra.bpms.client.swagger.Configuration;
+//import com.questetra.bpms.client.swagger.auth.*;
+//import com.questetra.bpms.client.swagger.api.QuserApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: basic
+HttpBasicAuth basic = (HttpBasicAuth) defaultClient.getAuthentication("basic");
+basic.setUsername("YOUR USERNAME");
+basic.setPassword("YOUR PASSWORD");
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+QuserApi apiInstance = new QuserApi();
+try {
+    QuserWithPrimaryQgroupWrapper result = apiInstance.getMySelf();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling QuserApi#getMySelf");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**QuserWithPrimaryQgroupWrapper**](QuserWithPrimaryQgroupWrapper.md)
+
+### Authorization
+
+[basic](../README.md#basic), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="listQusers"></a>
+# **listQusers**
+> QuserList listQusers(query, limit, start)
 
 Retrieving a List of Users
 
@@ -228,10 +282,10 @@ String query = "query_example"; // String |
 Integer limit = 56; // Integer | Max number of records to return
 Integer start = 56; // Integer | The offset of the first record to return
 try {
-    QuserList result = apiInstance.list(query, limit, start);
+    QuserList result = apiInstance.listQusers(query, limit, start);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QuserApi#list");
+    System.err.println("Exception when calling QuserApi#listQusers");
     e.printStackTrace();
 }
 ```
@@ -257,63 +311,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="self"></a>
-# **self**
-> QuserWithPrimaryQgroupWrapper self()
-
-Retrieving the user’s own User Account
-
-Retrieving the user’s own User Account
-
-### Example
-```java
-// Import classes:
-//import com.questetra.bpms.client.swagger.ApiClient;
-//import com.questetra.bpms.client.swagger.ApiException;
-//import com.questetra.bpms.client.swagger.Configuration;
-//import com.questetra.bpms.client.swagger.auth.*;
-//import com.questetra.bpms.client.swagger.api.QuserApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure HTTP basic authorization: basic
-HttpBasicAuth basic = (HttpBasicAuth) defaultClient.getAuthentication("basic");
-basic.setUsername("YOUR USERNAME");
-basic.setPassword("YOUR PASSWORD");
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-QuserApi apiInstance = new QuserApi();
-try {
-    QuserWithPrimaryQgroupWrapper result = apiInstance.self();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling QuserApi#self");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**QuserWithPrimaryQgroupWrapper**](QuserWithPrimaryQgroupWrapper.md)
-
-### Authorization
-
-[basic](../README.md#basic), [oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="update"></a>
-# **update**
-> QuserWithPrimaryQgroupWrapper update(id, name, email, password, primaryQgroupId)
+<a name="updateQuser"></a>
+# **updateQuser**
+> QuserWithPrimaryQgroupWrapper updateQuser(id, name, email, password, primaryQgroupId)
 
 Updating a User Account
 
@@ -346,10 +346,10 @@ String email = "email_example"; // String |
 String password = "password_example"; // String | 
 Long primaryQgroupId = 789L; // Long | 
 try {
-    QuserWithPrimaryQgroupWrapper result = apiInstance.update(id, name, email, password, primaryQgroupId);
+    QuserWithPrimaryQgroupWrapper result = apiInstance.updateQuser(id, name, email, password, primaryQgroupId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QuserApi#update");
+    System.err.println("Exception when calling QuserApi#updateQuser");
     e.printStackTrace();
 }
 ```

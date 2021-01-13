@@ -1,18 +1,18 @@
 # RoleMembershipApi
 
-All URIs are relative to *https://online-demo-en.questetra.net*
+All URIs are relative to *https://192.168.1.12:18443/userweb/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add**](RoleMembershipApi.md#add) | **POST** /API/UGA/RoleMembership/add | Adding a Member to a Role
-[**delete**](RoleMembershipApi.md#delete) | **POST** /API/UGA/RoleMembership/delete | Deleting a Member from a Role
-[**listByQrole**](RoleMembershipApi.md#listByQrole) | **GET** /API/User/RoleMembership/listByQrole | Retrieving all Members of a Role
-[**listByQuser**](RoleMembershipApi.md#listByQuser) | **GET** /API/User/RoleMembership/listByQuser | Retrieving all Roles for a User
+[**addRoleMembership**](RoleMembershipApi.md#addRoleMembership) | **POST** /API/UGA/RoleMembership/add | Adding a Member to a Role
+[**deleteRoleMembership**](RoleMembershipApi.md#deleteRoleMembership) | **POST** /API/UGA/RoleMembership/delete | Deleting a Member from a Role
+[**listRoleMembershipsByQrole**](RoleMembershipApi.md#listRoleMembershipsByQrole) | **GET** /API/User/RoleMembership/listByQrole | Retrieving all Members of a Role
+[**listRoleMembershipsByQuser**](RoleMembershipApi.md#listRoleMembershipsByQuser) | **GET** /API/User/RoleMembership/listByQuser | Retrieving all Roles for a User
 
 
-<a name="add"></a>
-# **add**
-> RoleMembershipWrapper add(quserId, qroleId)
+<a name="addRoleMembership"></a>
+# **addRoleMembership**
+> RoleMembershipWrapper addRoleMembership(quserId, qroleId)
 
 Adding a Member to a Role
 
@@ -42,10 +42,10 @@ RoleMembershipApi apiInstance = new RoleMembershipApi();
 Long quserId = 789L; // Long | User ID
 Long qroleId = 789L; // Long | Role ID
 try {
-    RoleMembershipWrapper result = apiInstance.add(quserId, qroleId);
+    RoleMembershipWrapper result = apiInstance.addRoleMembership(quserId, qroleId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RoleMembershipApi#add");
+    System.err.println("Exception when calling RoleMembershipApi#addRoleMembership");
     e.printStackTrace();
 }
 ```
@@ -70,9 +70,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
-<a name="delete"></a>
-# **delete**
-> delete(quserId, qroleId)
+<a name="deleteRoleMembership"></a>
+# **deleteRoleMembership**
+> deleteRoleMembership(quserId, qroleId)
 
 Deleting a Member from a Role
 
@@ -102,9 +102,9 @@ RoleMembershipApi apiInstance = new RoleMembershipApi();
 Long quserId = 789L; // Long | User ID
 Long qroleId = 789L; // Long | Role ID
 try {
-    apiInstance.delete(quserId, qroleId);
+    apiInstance.deleteRoleMembership(quserId, qroleId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RoleMembershipApi#delete");
+    System.err.println("Exception when calling RoleMembershipApi#deleteRoleMembership");
     e.printStackTrace();
 }
 ```
@@ -129,9 +129,9 @@ null (empty response body)
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
-<a name="listByQrole"></a>
-# **listByQrole**
-> RoleMembershipList listByQrole(id)
+<a name="listRoleMembershipsByQrole"></a>
+# **listRoleMembershipsByQrole**
+> RoleMembershipList listRoleMembershipsByQrole(id)
 
 Retrieving all Members of a Role
 
@@ -160,10 +160,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 RoleMembershipApi apiInstance = new RoleMembershipApi();
 Long id = 789L; // Long | Role ID
 try {
-    RoleMembershipList result = apiInstance.listByQrole(id);
+    RoleMembershipList result = apiInstance.listRoleMembershipsByQrole(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RoleMembershipApi#listByQrole");
+    System.err.println("Exception when calling RoleMembershipApi#listRoleMembershipsByQrole");
     e.printStackTrace();
 }
 ```
@@ -187,9 +187,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="listByQuser"></a>
-# **listByQuser**
-> RoleMembershipList listByQuser(id)
+<a name="listRoleMembershipsByQuser"></a>
+# **listRoleMembershipsByQuser**
+> RoleMembershipList listRoleMembershipsByQuser(id)
 
 Retrieving all Roles for a User
 
@@ -218,10 +218,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 RoleMembershipApi apiInstance = new RoleMembershipApi();
 Long id = 789L; // Long | User ID
 try {
-    RoleMembershipList result = apiInstance.listByQuser(id);
+    RoleMembershipList result = apiInstance.listRoleMembershipsByQuser(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RoleMembershipApi#listByQuser");
+    System.err.println("Exception when calling RoleMembershipApi#listRoleMembershipsByQuser");
     e.printStackTrace();
 }
 ```

@@ -1,19 +1,19 @@
 # QroleApi
 
-All URIs are relative to *https://online-demo-en.questetra.net*
+All URIs are relative to *https://192.168.1.12:18443/userweb/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add**](QroleApi.md#add) | **POST** /API/UGA/Qrole/add | Creating a Role Unit
-[**delete**](QroleApi.md#delete) | **POST** /API/UGA/Qrole/delete | Deleting a Role Unit
-[**find**](QroleApi.md#find) | **GET** /API/User/Qrole/find | Retrieving a Role Unit
-[**list**](QroleApi.md#list) | **GET** /API/User/Qrole/list | Retrieving a List of Roles
-[**update**](QroleApi.md#update) | **POST** /API/UGA/Qrole/update | Updating a Role Unit
+[**addQrole**](QroleApi.md#addQrole) | **POST** /API/UGA/Qrole/add | Creating a Role Unit
+[**deleteQrole**](QroleApi.md#deleteQrole) | **POST** /API/UGA/Qrole/delete | Deleting a Role Unit
+[**findQrole**](QroleApi.md#findQrole) | **GET** /API/User/Qrole/find | Retrieving a Role Unit
+[**listQroles**](QroleApi.md#listQroles) | **GET** /API/User/Qrole/list | Retrieving a List of Roles
+[**updateQrole**](QroleApi.md#updateQrole) | **POST** /API/UGA/Qrole/update | Updating a Role Unit
 
 
-<a name="add"></a>
-# **add**
-> QroleWrapper add(name)
+<a name="addQrole"></a>
+# **addQrole**
+> QroleWrapper addQrole(name)
 
 Creating a Role Unit
 
@@ -42,10 +42,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 QroleApi apiInstance = new QroleApi();
 String name = "name_example"; // String | Role name
 try {
-    QroleWrapper result = apiInstance.add(name);
+    QroleWrapper result = apiInstance.addQrole(name);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QroleApi#add");
+    System.err.println("Exception when calling QroleApi#addQrole");
     e.printStackTrace();
 }
 ```
@@ -69,9 +69,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
-<a name="delete"></a>
-# **delete**
-> delete(id)
+<a name="deleteQrole"></a>
+# **deleteQrole**
+> deleteQrole(id)
 
 Deleting a Role Unit
 
@@ -100,9 +100,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 QroleApi apiInstance = new QroleApi();
 Long id = 789L; // Long | Role ID
 try {
-    apiInstance.delete(id);
+    apiInstance.deleteQrole(id);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QroleApi#delete");
+    System.err.println("Exception when calling QroleApi#deleteQrole");
     e.printStackTrace();
 }
 ```
@@ -126,9 +126,9 @@ null (empty response body)
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
-<a name="find"></a>
-# **find**
-> QroleWrapper find(id, name)
+<a name="findQrole"></a>
+# **findQrole**
+> QroleWrapper findQrole(id, name)
 
 Retrieving a Role Unit
 
@@ -158,10 +158,10 @@ QroleApi apiInstance = new QroleApi();
 Integer id = 56; // Integer | 
 String name = "name_example"; // String | 
 try {
-    QroleWrapper result = apiInstance.find(id, name);
+    QroleWrapper result = apiInstance.findQrole(id, name);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QroleApi#find");
+    System.err.println("Exception when calling QroleApi#findQrole");
     e.printStackTrace();
 }
 ```
@@ -186,9 +186,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="list"></a>
-# **list**
-> QroleList list(query, limit, start)
+<a name="listQroles"></a>
+# **listQroles**
+> QroleList listQroles(query, limit, start)
 
 Retrieving a List of Roles
 
@@ -219,10 +219,10 @@ String query = "query_example"; // String |
 Integer limit = 56; // Integer | Max number of records to return
 Integer start = 56; // Integer | The offset of the first record to return
 try {
-    QroleList result = apiInstance.list(query, limit, start);
+    QroleList result = apiInstance.listQroles(query, limit, start);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QroleApi#list");
+    System.err.println("Exception when calling QroleApi#listQroles");
     e.printStackTrace();
 }
 ```
@@ -248,9 +248,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="update"></a>
-# **update**
-> QroleWrapper update(id, name)
+<a name="updateQrole"></a>
+# **updateQrole**
+> QroleWrapper updateQrole(id, name)
 
 Updating a Role Unit
 
@@ -280,10 +280,10 @@ QroleApi apiInstance = new QroleApi();
 Long id = 789L; // Long | Role ID
 String name = "name_example"; // String | Role name
 try {
-    QroleWrapper result = apiInstance.update(id, name);
+    QroleWrapper result = apiInstance.updateQrole(id, name);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QroleApi#update");
+    System.err.println("Exception when calling QroleApi#updateQrole");
     e.printStackTrace();
 }
 ```

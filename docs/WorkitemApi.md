@@ -1,27 +1,27 @@
 # WorkitemApi
 
-All URIs are relative to *https://online-demo-en.questetra.net*
+All URIs are relative to *https://192.168.1.12:18443/userweb/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addStar**](WorkitemApi.md#addStar) | **POST** /API/OR/Workitem/Star/add | Adding a Star to a Task
-[**batchAccespWorkitem**](WorkitemApi.md#batchAccespWorkitem) | **POST** /API/PE/Workitem/batchAccept | Accepting a Offered Task
-[**list**](WorkitemApi.md#list) | **GET** /API/OR/Workitem/list | Querying for Task records operated by the User
-[**listAllocatedWorkitem**](WorkitemApi.md#listAllocatedWorkitem) | **GET** /API/PE/Workitem/listAllocated | Retrieving a List of My Tasks
-[**listCsv**](WorkitemApi.md#listCsv) | **GET** /API/OR/Workitem/listCsv | Querying for Task records operated by the User
-[**listCsvUtf16**](WorkitemApi.md#listCsvUtf16) | **GET** /API/OR/Workitem/listCsvUtf16 | Querying for Task records operated by the User
-[**listOfferedWorkitem**](WorkitemApi.md#listOfferedWorkitem) | **GET** /API/PE/Workitem/listOffered | Retrieving a List of Offered Tasks
-[**reallocate**](WorkitemApi.md#reallocate) | **POST** /API/PIM/Workitem/reallocate | Reallocating Task
-[**removeStar**](WorkitemApi.md#removeStar) | **POST** /API/OR/Workitem/Star/remove | Removing a Star from a Task
+[**addWorkitemStar**](WorkitemApi.md#addWorkitemStar) | **POST** /API/OR/Workitem/Star/add | Adding a Star to a Process related to a Task
+[**batchAcceptWorkitems**](WorkitemApi.md#batchAcceptWorkitems) | **POST** /API/PE/Workitem/batchAccept | Accepting a Offered Task
+[**listAllocatedWorkitems**](WorkitemApi.md#listAllocatedWorkitems) | **GET** /API/PE/Workitem/listAllocated | Retrieving a List of My Tasks
+[**listOfferedWorkitems**](WorkitemApi.md#listOfferedWorkitems) | **GET** /API/PE/Workitem/listOffered | Retrieving a List of Offered Tasks
+[**listWorkitems**](WorkitemApi.md#listWorkitems) | **GET** /API/OR/Workitem/list | Querying for Task records operated by the User
+[**listWorkitemsCsv**](WorkitemApi.md#listWorkitemsCsv) | **GET** /API/OR/Workitem/listCsv | Querying for Task records operated by the User
+[**listWorkitemsCsvUtf16**](WorkitemApi.md#listWorkitemsCsvUtf16) | **GET** /API/OR/Workitem/listCsvUtf16 | Querying for Task records operated by the User
+[**reallocateWorkitem**](WorkitemApi.md#reallocateWorkitem) | **POST** /API/PIM/Workitem/reallocate | Reallocating Task
+[**removeWorkitemStar**](WorkitemApi.md#removeWorkitemStar) | **POST** /API/OR/Workitem/Star/remove | Removing a Star from a Process related to a Task
 
 
-<a name="addStar"></a>
-# **addStar**
-> addStar(workitemId)
+<a name="addWorkitemStar"></a>
+# **addWorkitemStar**
+> addWorkitemStar(workitemId)
 
-Adding a Star to a Task
+Adding a Star to a Process related to a Task
 
-Adding a Star to a Task
+Adding a Star to a Process related to a Task
 
 ### Example
 ```java
@@ -46,9 +46,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 WorkitemApi apiInstance = new WorkitemApi();
 Long workitemId = 789L; // Long | 
 try {
-    apiInstance.addStar(workitemId);
+    apiInstance.addWorkitemStar(workitemId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling WorkitemApi#addStar");
+    System.err.println("Exception when calling WorkitemApi#addWorkitemStar");
     e.printStackTrace();
 }
 ```
@@ -72,9 +72,9 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="batchAccespWorkitem"></a>
-# **batchAccespWorkitem**
-> WorkitemOpResultList batchAccespWorkitem(workitemIds)
+<a name="batchAcceptWorkitems"></a>
+# **batchAcceptWorkitems**
+> WorkitemOpResultList batchAcceptWorkitems(workitemIds)
 
 Accepting a Offered Task
 
@@ -103,10 +103,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 WorkitemApi apiInstance = new WorkitemApi();
 List<Long> workitemIds = Arrays.asList(56L); // List<Long> | Multiple IDs are OK
 try {
-    WorkitemOpResultList result = apiInstance.batchAccespWorkitem(workitemIds);
+    WorkitemOpResultList result = apiInstance.batchAcceptWorkitems(workitemIds);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling WorkitemApi#batchAccespWorkitem");
+    System.err.println("Exception when calling WorkitemApi#batchAcceptWorkitems");
     e.printStackTrace();
 }
 ```
@@ -130,9 +130,117 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="list"></a>
-# **list**
-> WorkitemWithDataList list(criteria, limit, start)
+<a name="listAllocatedWorkitems"></a>
+# **listAllocatedWorkitems**
+> WorkitemList listAllocatedWorkitems()
+
+Retrieving a List of My Tasks
+
+Retrieving a List of My Tasks
+
+### Example
+```java
+// Import classes:
+//import com.questetra.bpms.client.swagger.ApiClient;
+//import com.questetra.bpms.client.swagger.ApiException;
+//import com.questetra.bpms.client.swagger.Configuration;
+//import com.questetra.bpms.client.swagger.auth.*;
+//import com.questetra.bpms.client.swagger.api.WorkitemApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: basic
+HttpBasicAuth basic = (HttpBasicAuth) defaultClient.getAuthentication("basic");
+basic.setUsername("YOUR USERNAME");
+basic.setPassword("YOUR PASSWORD");
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+WorkitemApi apiInstance = new WorkitemApi();
+try {
+    WorkitemList result = apiInstance.listAllocatedWorkitems();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WorkitemApi#listAllocatedWorkitems");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**WorkitemList**](WorkitemList.md)
+
+### Authorization
+
+[basic](../README.md#basic), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="listOfferedWorkitems"></a>
+# **listOfferedWorkitems**
+> WorkitemList listOfferedWorkitems()
+
+Retrieving a List of Offered Tasks
+
+Retrieving a List of Offered Tasks
+
+### Example
+```java
+// Import classes:
+//import com.questetra.bpms.client.swagger.ApiClient;
+//import com.questetra.bpms.client.swagger.ApiException;
+//import com.questetra.bpms.client.swagger.Configuration;
+//import com.questetra.bpms.client.swagger.auth.*;
+//import com.questetra.bpms.client.swagger.api.WorkitemApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: basic
+HttpBasicAuth basic = (HttpBasicAuth) defaultClient.getAuthentication("basic");
+basic.setUsername("YOUR USERNAME");
+basic.setPassword("YOUR PASSWORD");
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+WorkitemApi apiInstance = new WorkitemApi();
+try {
+    WorkitemList result = apiInstance.listOfferedWorkitems();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WorkitemApi#listOfferedWorkitems");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**WorkitemList**](WorkitemList.md)
+
+### Authorization
+
+[basic](../README.md#basic), [oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="listWorkitems"></a>
+# **listWorkitems**
+> WorkitemWithDataList listWorkitems(criteria, limit, start)
 
 Querying for Task records operated by the User
 
@@ -159,14 +267,14 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WorkitemApi apiInstance = new WorkitemApi();
-String criteria = "criteria_example"; // String | Search condition
+String criteria = "criteria_example"; // String | Search condition https://questetra.zendesk.com/hc/ja/articles/360002463432-XML-Criteria-for-Workitem-Search
 Integer limit = 56; // Integer | Max number of records to return
 Integer start = 56; // Integer | The offset of the first record to return
 try {
-    WorkitemWithDataList result = apiInstance.list(criteria, limit, start);
+    WorkitemWithDataList result = apiInstance.listWorkitems(criteria, limit, start);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling WorkitemApi#list");
+    System.err.println("Exception when calling WorkitemApi#listWorkitems");
     e.printStackTrace();
 }
 ```
@@ -175,7 +283,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **criteria** | **String**| Search condition | [optional]
+ **criteria** | **String**| Search condition https://questetra.zendesk.com/hc/ja/articles/360002463432-XML-Criteria-for-Workitem-Search | [optional]
  **limit** | **Integer**| Max number of records to return | [optional]
  **start** | **Integer**| The offset of the first record to return | [optional]
 
@@ -192,63 +300,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="listAllocatedWorkitem"></a>
-# **listAllocatedWorkitem**
-> WorkitemList listAllocatedWorkitem()
-
-Retrieving a List of My Tasks
-
-Retrieving a List of My Tasks
-
-### Example
-```java
-// Import classes:
-//import com.questetra.bpms.client.swagger.ApiClient;
-//import com.questetra.bpms.client.swagger.ApiException;
-//import com.questetra.bpms.client.swagger.Configuration;
-//import com.questetra.bpms.client.swagger.auth.*;
-//import com.questetra.bpms.client.swagger.api.WorkitemApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure HTTP basic authorization: basic
-HttpBasicAuth basic = (HttpBasicAuth) defaultClient.getAuthentication("basic");
-basic.setUsername("YOUR USERNAME");
-basic.setPassword("YOUR PASSWORD");
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-WorkitemApi apiInstance = new WorkitemApi();
-try {
-    WorkitemList result = apiInstance.listAllocatedWorkitem();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling WorkitemApi#listAllocatedWorkitem");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**WorkitemList**](WorkitemList.md)
-
-### Authorization
-
-[basic](../README.md#basic), [oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="listCsv"></a>
-# **listCsv**
-> String listCsv(criteria, limit, start)
+<a name="listWorkitemsCsv"></a>
+# **listWorkitemsCsv**
+> String listWorkitemsCsv(criteria, limit, start)
 
 Querying for Task records operated by the User
 
@@ -275,14 +329,14 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WorkitemApi apiInstance = new WorkitemApi();
-String criteria = "criteria_example"; // String | Search condition
+String criteria = "criteria_example"; // String | Search condition https://questetra.zendesk.com/hc/ja/articles/360002463432-XML-Criteria-for-Workitem-Search
 Integer limit = 56; // Integer | Max number of records to return
 Integer start = 56; // Integer | The offset of the first record to return
 try {
-    String result = apiInstance.listCsv(criteria, limit, start);
+    String result = apiInstance.listWorkitemsCsv(criteria, limit, start);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling WorkitemApi#listCsv");
+    System.err.println("Exception when calling WorkitemApi#listWorkitemsCsv");
     e.printStackTrace();
 }
 ```
@@ -291,7 +345,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **criteria** | **String**| Search condition | [optional]
+ **criteria** | **String**| Search condition https://questetra.zendesk.com/hc/ja/articles/360002463432-XML-Criteria-for-Workitem-Search | [optional]
  **limit** | **Integer**| Max number of records to return | [optional]
  **start** | **Integer**| The offset of the first record to return | [optional]
 
@@ -308,9 +362,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: text/csv
 
-<a name="listCsvUtf16"></a>
-# **listCsvUtf16**
-> String listCsvUtf16(criteria, limit, start)
+<a name="listWorkitemsCsvUtf16"></a>
+# **listWorkitemsCsvUtf16**
+> String listWorkitemsCsvUtf16(criteria, limit, start)
 
 Querying for Task records operated by the User
 
@@ -337,14 +391,14 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WorkitemApi apiInstance = new WorkitemApi();
-String criteria = "criteria_example"; // String | Search condition
+String criteria = "criteria_example"; // String | Search condition https://questetra.zendesk.com/hc/ja/articles/360002463432-XML-Criteria-for-Workitem-Search
 Integer limit = 56; // Integer | Max number of records to return
 Integer start = 56; // Integer | The offset of the first record to return
 try {
-    String result = apiInstance.listCsvUtf16(criteria, limit, start);
+    String result = apiInstance.listWorkitemsCsvUtf16(criteria, limit, start);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling WorkitemApi#listCsvUtf16");
+    System.err.println("Exception when calling WorkitemApi#listWorkitemsCsvUtf16");
     e.printStackTrace();
 }
 ```
@@ -353,7 +407,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **criteria** | **String**| Search condition | [optional]
+ **criteria** | **String**| Search condition https://questetra.zendesk.com/hc/ja/articles/360002463432-XML-Criteria-for-Workitem-Search | [optional]
  **limit** | **Integer**| Max number of records to return | [optional]
  **start** | **Integer**| The offset of the first record to return | [optional]
 
@@ -370,63 +424,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: text/csv
 
-<a name="listOfferedWorkitem"></a>
-# **listOfferedWorkitem**
-> WorkitemList listOfferedWorkitem()
-
-Retrieving a List of Offered Tasks
-
-Retrieving a List of Offered Tasks
-
-### Example
-```java
-// Import classes:
-//import com.questetra.bpms.client.swagger.ApiClient;
-//import com.questetra.bpms.client.swagger.ApiException;
-//import com.questetra.bpms.client.swagger.Configuration;
-//import com.questetra.bpms.client.swagger.auth.*;
-//import com.questetra.bpms.client.swagger.api.WorkitemApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure HTTP basic authorization: basic
-HttpBasicAuth basic = (HttpBasicAuth) defaultClient.getAuthentication("basic");
-basic.setUsername("YOUR USERNAME");
-basic.setPassword("YOUR PASSWORD");
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-WorkitemApi apiInstance = new WorkitemApi();
-try {
-    WorkitemList result = apiInstance.listOfferedWorkitem();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling WorkitemApi#listOfferedWorkitem");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**WorkitemList**](WorkitemList.md)
-
-### Authorization
-
-[basic](../README.md#basic), [oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="reallocate"></a>
-# **reallocate**
-> reallocate(workitemId, quserId, qgroupId)
+<a name="reallocateWorkitem"></a>
+# **reallocateWorkitem**
+> reallocateWorkitem(workitemId, quserId, qgroupId)
 
 Reallocating Task
 
@@ -457,9 +457,9 @@ Long workitemId = 789L; // Long |
 Long quserId = 789L; // Long | 
 Long qgroupId = 789L; // Long | 
 try {
-    apiInstance.reallocate(workitemId, quserId, qgroupId);
+    apiInstance.reallocateWorkitem(workitemId, quserId, qgroupId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling WorkitemApi#reallocate");
+    System.err.println("Exception when calling WorkitemApi#reallocateWorkitem");
     e.printStackTrace();
 }
 ```
@@ -485,13 +485,13 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="removeStar"></a>
-# **removeStar**
-> removeStar(workitemId)
+<a name="removeWorkitemStar"></a>
+# **removeWorkitemStar**
+> removeWorkitemStar(workitemId)
 
-Removing a Star from a Task
+Removing a Star from a Process related to a Task
 
-Removing a Star from a Task
+Removing a Star from a Process related to a Task
 
 ### Example
 ```java
@@ -516,9 +516,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 WorkitemApi apiInstance = new WorkitemApi();
 Long workitemId = 789L; // Long | 
 try {
-    apiInstance.removeStar(workitemId);
+    apiInstance.removeWorkitemStar(workitemId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling WorkitemApi#removeStar");
+    System.err.println("Exception when calling WorkitemApi#removeWorkitemStar");
     e.printStackTrace();
 }
 ```

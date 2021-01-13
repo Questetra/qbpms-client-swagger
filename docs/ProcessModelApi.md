@@ -1,17 +1,17 @@
 # ProcessModelApi
 
-All URIs are relative to *https://online-demo-en.questetra.net*
+All URIs are relative to *https://192.168.1.12:18443/userweb/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listProcessModel**](ProcessModelApi.md#listProcessModel) | **GET** /API/Admin/ProcessModel/list | Retrieving a List of Process Models
-[**listStartableProcessModel**](ProcessModelApi.md#listStartableProcessModel) | **GET** /API/PE/ProcessModel/listStartable | Retrieving a List of startable Workflows
+[**listAllProcessModels**](ProcessModelApi.md#listAllProcessModels) | **GET** /API/Admin/ProcessModel/list | Retrieving a List of Process Models
+[**listStartableProcessModels**](ProcessModelApi.md#listStartableProcessModels) | **GET** /API/PE/ProcessModel/listStartable | Retrieving a List of startable Workflows
 [**releaseProcessModel**](ProcessModelApi.md#releaseProcessModel) | **POST** /API/PMM/ProcessModel/{processModelInfoId}/release | Release process model
 
 
-<a name="listProcessModel"></a>
-# **listProcessModel**
-> ProcessModelInfoList listProcessModel(limit, start, category, query, starredOnly, dbFile)
+<a name="listAllProcessModels"></a>
+# **listAllProcessModels**
+> ProcessModelInfoList listAllProcessModels(limit, start, category, query, starredOnly, dbFile)
 
 Retrieving a List of Process Models
 
@@ -45,10 +45,10 @@ String query = "query_example"; // String | Search String
 Boolean starredOnly = true; // Boolean | Search for a starred Process Model
 String dbFile = "dbFile_example"; // String | Search for a process model that uses a file with the specified name
 try {
-    ProcessModelInfoList result = apiInstance.listProcessModel(limit, start, category, query, starredOnly, dbFile);
+    ProcessModelInfoList result = apiInstance.listAllProcessModels(limit, start, category, query, starredOnly, dbFile);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ProcessModelApi#listProcessModel");
+    System.err.println("Exception when calling ProcessModelApi#listAllProcessModels");
     e.printStackTrace();
 }
 ```
@@ -77,9 +77,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="listStartableProcessModel"></a>
-# **listStartableProcessModel**
-> ActivityList listStartableProcessModel(limit, start, category, query)
+<a name="listStartableProcessModels"></a>
+# **listStartableProcessModels**
+> ActivityList listStartableProcessModels(limit, start, category, query)
 
 Retrieving a List of startable Workflows
 
@@ -111,10 +111,10 @@ Integer start = 56; // Integer | The offset of the first record to return
 String category = "category_example"; // String | Category of Process Model
 String query = "query_example"; // String | Search String
 try {
-    ActivityList result = apiInstance.listStartableProcessModel(limit, start, category, query);
+    ActivityList result = apiInstance.listStartableProcessModels(limit, start, category, query);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ProcessModelApi#listStartableProcessModel");
+    System.err.println("Exception when calling ProcessModelApi#listStartableProcessModels");
     e.printStackTrace();
 }
 ```

@@ -1,19 +1,19 @@
 # QgroupApi
 
-All URIs are relative to *https://online-demo-en.questetra.net*
+All URIs are relative to *https://192.168.1.12:18443/userweb/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add**](QgroupApi.md#add) | **POST** /API/UGA/Qgroup/add | Creating an Organization Unit
-[**delete**](QgroupApi.md#delete) | **POST** /API/UGA/Qgroup/delete | Deleting an Organization Unit
-[**find**](QgroupApi.md#find) | **GET** /API/User/Qgroup/find | Retrieving an Organization Unit
-[**list**](QgroupApi.md#list) | **GET** /API/User/Qgroup/list | Retrieving a List of Organizations
-[**update**](QgroupApi.md#update) | **POST** /API/UGA/Qgroup/update | Updating an Organization Unit
+[**addQgroup**](QgroupApi.md#addQgroup) | **POST** /API/UGA/Qgroup/add | Creating an Organization Unit
+[**deleteQgroup**](QgroupApi.md#deleteQgroup) | **POST** /API/UGA/Qgroup/delete | Deleting an Organization Unit
+[**findQgroup**](QgroupApi.md#findQgroup) | **GET** /API/User/Qgroup/find | Retrieving an Organization Unit
+[**listQgroups**](QgroupApi.md#listQgroups) | **GET** /API/User/Qgroup/list | Retrieving a List of Organizations
+[**updateQgroup**](QgroupApi.md#updateQgroup) | **POST** /API/UGA/Qgroup/update | Updating an Organization Unit
 
 
-<a name="add"></a>
-# **add**
-> QgroupWrapper add(name, parentQgroupId, email)
+<a name="addQgroup"></a>
+# **addQgroup**
+> QgroupWrapper addQgroup(name, parentQgroupId, email)
 
 Creating an Organization Unit
 
@@ -44,10 +44,10 @@ String name = "name_example"; // String | Organization name
 Long parentQgroupId = 789L; // Long | Parent Organization ID
 String email = "email_example"; // String | Organization email address
 try {
-    QgroupWrapper result = apiInstance.add(name, parentQgroupId, email);
+    QgroupWrapper result = apiInstance.addQgroup(name, parentQgroupId, email);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QgroupApi#add");
+    System.err.println("Exception when calling QgroupApi#addQgroup");
     e.printStackTrace();
 }
 ```
@@ -73,9 +73,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
-<a name="delete"></a>
-# **delete**
-> delete(id)
+<a name="deleteQgroup"></a>
+# **deleteQgroup**
+> deleteQgroup(id)
 
 Deleting an Organization Unit
 
@@ -104,9 +104,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 QgroupApi apiInstance = new QgroupApi();
 Long id = 789L; // Long | Organization ID
 try {
-    apiInstance.delete(id);
+    apiInstance.deleteQgroup(id);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QgroupApi#delete");
+    System.err.println("Exception when calling QgroupApi#deleteQgroup");
     e.printStackTrace();
 }
 ```
@@ -130,9 +130,9 @@ null (empty response body)
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
-<a name="find"></a>
-# **find**
-> QgroupWrapper find(id, name)
+<a name="findQgroup"></a>
+# **findQgroup**
+> QgroupWrapper findQgroup(id, name)
 
 Retrieving an Organization Unit
 
@@ -162,10 +162,10 @@ QgroupApi apiInstance = new QgroupApi();
 Long id = 789L; // Long | 
 String name = "name_example"; // String | 
 try {
-    QgroupWrapper result = apiInstance.find(id, name);
+    QgroupWrapper result = apiInstance.findQgroup(id, name);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QgroupApi#find");
+    System.err.println("Exception when calling QgroupApi#findQgroup");
     e.printStackTrace();
 }
 ```
@@ -190,9 +190,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="list"></a>
-# **list**
-> QgroupList list(query, limit, start)
+<a name="listQgroups"></a>
+# **listQgroups**
+> QgroupList listQgroups(query, limit, start)
 
 Retrieving a List of Organizations
 
@@ -223,10 +223,10 @@ String query = "query_example"; // String |
 Integer limit = 56; // Integer | Max number of records to return
 Integer start = 56; // Integer | The offset of the first record to return
 try {
-    QgroupList result = apiInstance.list(query, limit, start);
+    QgroupList result = apiInstance.listQgroups(query, limit, start);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QgroupApi#list");
+    System.err.println("Exception when calling QgroupApi#listQgroups");
     e.printStackTrace();
 }
 ```
@@ -252,9 +252,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="update"></a>
-# **update**
-> QgroupWrapper update(id, name, email, parentQgroupId)
+<a name="updateQgroup"></a>
+# **updateQgroup**
+> QgroupWrapper updateQgroup(id, name, email, parentQgroupId)
 
 Updating an Organization Unit
 
@@ -286,10 +286,10 @@ String name = "name_example"; // String | Organization name
 String email = "email_example"; // String | Organization email address
 Long parentQgroupId = 789L; // Long | Parent Organization ID
 try {
-    QgroupWrapper result = apiInstance.update(id, name, email, parentQgroupId);
+    QgroupWrapper result = apiInstance.updateQgroup(id, name, email, parentQgroupId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling QgroupApi#update");
+    System.err.println("Exception when calling QgroupApi#updateQgroup");
     e.printStackTrace();
 }
 ```

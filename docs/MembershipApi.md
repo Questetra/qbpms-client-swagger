@@ -1,19 +1,19 @@
 # MembershipApi
 
-All URIs are relative to *https://online-demo-en.questetra.net*
+All URIs are relative to *https://192.168.1.12:18443/userweb/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add**](MembershipApi.md#add) | **POST** /API/UGA/Membership/add | Adding a Member to an Organization
-[**delete**](MembershipApi.md#delete) | **POST** /API/UGA/Membership/delete | Deleting a Member from an Organization
-[**listByQgroup**](MembershipApi.md#listByQgroup) | **GET** /API/User/Membership/listByQgroup | Retrieving all Members of an Organization
-[**listByQuser**](MembershipApi.md#listByQuser) | **GET** /API/User/Membership/listByQuser | Retrieving all Organizations for a User
-[**update**](MembershipApi.md#update) | **POST** /API/UGA/Membership/update | Assigning a Leader to an Organization
+[**addMembership**](MembershipApi.md#addMembership) | **POST** /API/UGA/Membership/add | Adding a Member to an Organization
+[**deleteMembership**](MembershipApi.md#deleteMembership) | **POST** /API/UGA/Membership/delete | Deleting a Member from an Organization
+[**listMembershipsByQgroup**](MembershipApi.md#listMembershipsByQgroup) | **GET** /API/User/Membership/listByQgroup | Retrieving all Members of an Organization
+[**listMembershipsByQuser**](MembershipApi.md#listMembershipsByQuser) | **GET** /API/User/Membership/listByQuser | Retrieving all Organizations for a User
+[**updateMembership**](MembershipApi.md#updateMembership) | **POST** /API/UGA/Membership/update | Assigning a Leader to an Organization
 
 
-<a name="add"></a>
-# **add**
-> MembershipWrapper add(quserId, qgroupId, role)
+<a name="addMembership"></a>
+# **addMembership**
+> MembershipWrapper addMembership(quserId, qgroupId, role)
 
 Adding a Member to an Organization
 
@@ -44,10 +44,10 @@ Long quserId = 789L; // Long | User ID
 Long qgroupId = 789L; // Long | Organization ID
 String role = "role_example"; // String | Member’s role
 try {
-    MembershipWrapper result = apiInstance.add(quserId, qgroupId, role);
+    MembershipWrapper result = apiInstance.addMembership(quserId, qgroupId, role);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling MembershipApi#add");
+    System.err.println("Exception when calling MembershipApi#addMembership");
     e.printStackTrace();
 }
 ```
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **quserId** | **Long**| User ID |
  **qgroupId** | **Long**| Organization ID |
- **role** | **String**| Member’s role | [optional] [enum: _leader]
+ **role** | **String**| Member’s role | [optional]
 
 ### Return type
 
@@ -73,9 +73,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
-<a name="delete"></a>
-# **delete**
-> delete(quserId, qgroupId)
+<a name="deleteMembership"></a>
+# **deleteMembership**
+> deleteMembership(quserId, qgroupId)
 
 Deleting a Member from an Organization
 
@@ -105,9 +105,9 @@ MembershipApi apiInstance = new MembershipApi();
 Long quserId = 789L; // Long | User ID
 Long qgroupId = 789L; // Long | Organization ID
 try {
-    apiInstance.delete(quserId, qgroupId);
+    apiInstance.deleteMembership(quserId, qgroupId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling MembershipApi#delete");
+    System.err.println("Exception when calling MembershipApi#deleteMembership");
     e.printStackTrace();
 }
 ```
@@ -132,9 +132,9 @@ null (empty response body)
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
-<a name="listByQgroup"></a>
-# **listByQgroup**
-> MembershipList listByQgroup(id)
+<a name="listMembershipsByQgroup"></a>
+# **listMembershipsByQgroup**
+> MembershipList listMembershipsByQgroup(id)
 
 Retrieving all Members of an Organization
 
@@ -163,10 +163,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 MembershipApi apiInstance = new MembershipApi();
 Long id = 789L; // Long | Organization ID
 try {
-    MembershipList result = apiInstance.listByQgroup(id);
+    MembershipList result = apiInstance.listMembershipsByQgroup(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling MembershipApi#listByQgroup");
+    System.err.println("Exception when calling MembershipApi#listMembershipsByQgroup");
     e.printStackTrace();
 }
 ```
@@ -190,9 +190,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="listByQuser"></a>
-# **listByQuser**
-> MembershipList listByQuser(id)
+<a name="listMembershipsByQuser"></a>
+# **listMembershipsByQuser**
+> MembershipList listMembershipsByQuser(id)
 
 Retrieving all Organizations for a User
 
@@ -221,10 +221,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 MembershipApi apiInstance = new MembershipApi();
 Long id = 789L; // Long | User ID
 try {
-    MembershipList result = apiInstance.listByQuser(id);
+    MembershipList result = apiInstance.listMembershipsByQuser(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling MembershipApi#listByQuser");
+    System.err.println("Exception when calling MembershipApi#listMembershipsByQuser");
     e.printStackTrace();
 }
 ```
@@ -248,9 +248,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="update"></a>
-# **update**
-> MembershipWrapper update(quserId, qgroupId, role)
+<a name="updateMembership"></a>
+# **updateMembership**
+> MembershipWrapper updateMembership(quserId, qgroupId, role)
 
 Assigning a Leader to an Organization
 
@@ -281,10 +281,10 @@ Long quserId = 789L; // Long | User ID
 Long qgroupId = 789L; // Long | Organization ID
 String role = "role_example"; // String | Member’s role
 try {
-    MembershipWrapper result = apiInstance.update(quserId, qgroupId, role);
+    MembershipWrapper result = apiInstance.updateMembership(quserId, qgroupId, role);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling MembershipApi#update");
+    System.err.println("Exception when calling MembershipApi#updateMembership");
     e.printStackTrace();
 }
 ```
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **quserId** | **Long**| User ID |
  **qgroupId** | **Long**| Organization ID |
- **role** | **String**| Member’s role | [optional] [enum: _leader]
+ **role** | **String**| Member’s role | [optional]
 
 ### Return type
 
