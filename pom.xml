@@ -172,8 +172,8 @@
 									<goal>generate</goal>
 								</goals>
 								<configuration>
-									<!-- <inputSpec>https://online-demo-en.questetra.net/Swagger/doc</inputSpec>  -->
-									<inputSpec>http://192.168.1.12:18080/userweb/Swagger/doc</inputSpec>
+									<inputSpec>https://online-demo-en.questetra.net/Swagger/doc</inputSpec>
+									<!-- <inputSpec>http://192.168.1.12:18080/userweb/Swagger/doc</inputSpec>  -->
 									<language>java</language>
 									<output>.</output>
 									<invokerPackage>com.questetra.bpms.client.swagger</invokerPackage>
