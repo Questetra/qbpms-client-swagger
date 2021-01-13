@@ -1,7 +1,7 @@
 # swagger-java-client
 
 Questetra BPM Suite APIs
-- API version: 12.3.0
+- API version: 12.3.1
   - Build date: 2021-01-13T11:19:00.868+09:00
 
 Questetra BPM Suite APIs
@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.questetra</groupId>
     <artifactId>bpms.client.swagger</artifactId>
-    <version>12.3.0</version>
+    <version>12.3.1</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -50,7 +50,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.questetra:bpms.client.swagger:12.3.0"
+compile "com.questetra:bpms.client.swagger:12.3.1"
 ```
 
 ### Others
@@ -63,7 +63,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/bpms.client.swagger-12.3.0.jar`
+* `target/bpms.client.swagger-12.3.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
