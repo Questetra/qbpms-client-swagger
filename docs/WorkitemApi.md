@@ -1,6 +1,6 @@
 # WorkitemApi
 
-All URIs are relative to *https://192.168.1.12:18443/userweb/*
+All URIs are relative to *https://online-demo-en.questetra.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
