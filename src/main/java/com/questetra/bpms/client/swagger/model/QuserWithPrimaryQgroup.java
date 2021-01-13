@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.questetra.bpms.client.swagger.model.Qgroup;
-import com.questetra.bpms.client.swagger.model.Quser;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -29,10 +28,73 @@ import java.io.IOException;
 /**
  * QuserWithPrimaryQgroup
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T11:09:14.859+09:00")
-public class QuserWithPrimaryQgroup extends Quser {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T15:44:52.325+09:00")
+public class QuserWithPrimaryQgroup {
+  @SerializedName("email")
+  private String email = null;
+
+  @SerializedName("id")
+  private Long id = null;
+
+  @SerializedName("name")
+  private String name = null;
+
   @SerializedName("primaryQgroup")
   private Qgroup primaryQgroup = null;
+
+  public QuserWithPrimaryQgroup email(String email) {
+    this.email = email;
+    return this;
+  }
+
+   /**
+   * User email address
+   * @return email
+  **/
+  @ApiModelProperty(example = "admin@questetra.com", value = "User email address")
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public QuserWithPrimaryQgroup id(Long id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * User ID
+   * @return id
+  **/
+  @ApiModelProperty(example = "123", value = "User ID")
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public QuserWithPrimaryQgroup name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * User name
+   * @return name
+  **/
+  @ApiModelProperty(example = "Administrator", value = "User name")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 
   public QuserWithPrimaryQgroup primaryQgroup(Qgroup primaryQgroup) {
     this.primaryQgroup = primaryQgroup;
@@ -62,13 +124,15 @@ public class QuserWithPrimaryQgroup extends Quser {
       return false;
     }
     QuserWithPrimaryQgroup quserWithPrimaryQgroup = (QuserWithPrimaryQgroup) o;
-    return Objects.equals(this.primaryQgroup, quserWithPrimaryQgroup.primaryQgroup) &&
-        super.equals(o);
+    return Objects.equals(this.email, quserWithPrimaryQgroup.email) &&
+        Objects.equals(this.id, quserWithPrimaryQgroup.id) &&
+        Objects.equals(this.name, quserWithPrimaryQgroup.name) &&
+        Objects.equals(this.primaryQgroup, quserWithPrimaryQgroup.primaryQgroup);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(primaryQgroup, super.hashCode());
+    return Objects.hash(email, id, name, primaryQgroup);
   }
 
 
@@ -76,7 +140,10 @@ public class QuserWithPrimaryQgroup extends Quser {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class QuserWithPrimaryQgroup {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    primaryQgroup: ").append(toIndentedString(primaryQgroup)).append("\n");
     sb.append("}");
     return sb.toString();

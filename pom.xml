@@ -51,7 +51,7 @@
 	</prerequisites>
 
 	<properties>
-		<java.version>1.7</java.version>
+		<java.version>1.8</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<gson-fire-version>1.8.3</gson-fire-version>
@@ -62,7 +62,7 @@
 		<maven-plugin-version>1.0.0</maven-plugin-version>
 		<junit-version>4.13.1</junit-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.version>12.3.0</project.version>
+		<project.version>12.3.1</project.version>
 	</properties>
 	<build>
 		<plugins>
@@ -172,8 +172,8 @@
 									<goal>generate</goal>
 								</goals>
 								<configuration>
-									<inputSpec>https://online-demo-en.questetra.net/Swagger/doc</inputSpec>
-									<!-- <inputSpec>http://192.168.1.12:18080/userweb/Swagger/doc</inputSpec>  -->
+									<!-- <inputSpec>https://online-demo-en.questetra.net/Swagger/doc</inputSpec>  -->
+									<inputSpec>http://192.168.1.12:18080/userweb/Swagger/doc</inputSpec>
 									<language>java</language>
 									<output>.</output>
 									<invokerPackage>com.questetra.bpms.client.swagger</invokerPackage>

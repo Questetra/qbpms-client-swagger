@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Workitem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T11:09:14.859+09:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-01-13T15:44:52.325+09:00")
 public class Workitem {
   @SerializedName("id")
   private Integer id = null;
@@ -51,9 +51,6 @@ public class Workitem {
 
   @SerializedName("allocatedQgroupName")
   private String allocatedQgroupName = null;
-
-  @SerializedName("data")
-  private Map<String, ProcessData> data = null;
 
   @SerializedName("endDatetime")
   private OffsetDateTime endDatetime = null;
@@ -135,6 +132,9 @@ public class Workitem {
 
   @SerializedName("read")
   private Boolean read = null;
+
+  @SerializedName("data")
+  private Map<String, ProcessData> data = null;
 
   public Workitem id(Integer id) {
     this.id = id;
@@ -242,32 +242,6 @@ public class Workitem {
 
   public void setAllocatedQgroupName(String allocatedQgroupName) {
     this.allocatedQgroupName = allocatedQgroupName;
-  }
-
-  public Workitem data(Map<String, ProcessData> data) {
-    this.data = data;
-    return this;
-  }
-
-  public Workitem putDataItem(String key, ProcessData dataItem) {
-    if (this.data == null) {
-      this.data = new HashMap<String, ProcessData>();
-    }
-    this.data.put(key, dataItem);
-    return this;
-  }
-
-   /**
-   * Get data
-   * @return data
-  **/
-  @ApiModelProperty(value = "")
-  public Map<String, ProcessData> getData() {
-    return data;
-  }
-
-  public void setData(Map<String, ProcessData> data) {
-    this.data = data;
   }
 
   public Workitem endDatetime(OffsetDateTime endDatetime) {
@@ -756,6 +730,32 @@ public class Workitem {
     this.read = read;
   }
 
+  public Workitem data(Map<String, ProcessData> data) {
+    this.data = data;
+    return this;
+  }
+
+  public Workitem putDataItem(String key, ProcessData dataItem) {
+    if (this.data == null) {
+      this.data = new HashMap<String, ProcessData>();
+    }
+    this.data.put(key, dataItem);
+    return this;
+  }
+
+   /**
+   * Get data
+   * @return data
+  **/
+  @ApiModelProperty(value = "")
+  public Map<String, ProcessData> getData() {
+    return data;
+  }
+
+  public void setData(Map<String, ProcessData> data) {
+    this.data = data;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -772,7 +772,6 @@ public class Workitem {
         Objects.equals(this.allocatedQuserName, workitem.allocatedQuserName) &&
         Objects.equals(this.allocatedQgroupId, workitem.allocatedQgroupId) &&
         Objects.equals(this.allocatedQgroupName, workitem.allocatedQgroupName) &&
-        Objects.equals(this.data, workitem.data) &&
         Objects.equals(this.endDatetime, workitem.endDatetime) &&
         Objects.equals(this.nodeName, workitem.nodeName) &&
         Objects.equals(this.nodeNumber, workitem.nodeNumber) &&
@@ -799,12 +798,13 @@ public class Workitem {
         Objects.equals(this.swimlaneType, workitem.swimlaneType) &&
         Objects.equals(this.timeLimitDatetime, workitem.timeLimitDatetime) &&
         Objects.equals(this.starred, workitem.starred) &&
-        Objects.equals(this.read, workitem.read);
+        Objects.equals(this.read, workitem.read) &&
+        Objects.equals(this.data, workitem.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, allocateDatetime, allocatedQuserId, allocatedQuserName, allocatedQgroupId, allocatedQgroupName, data, endDatetime, nodeName, nodeNumber, offerDatetime, processInstanceEndDatetime, processInstanceIdForView, processInstanceId, processInstanceSequenceNumber, processInstanceInitQgroupId, processInstanceInitQgroupName, processInstanceInitQuserId, processInstanceInitQuserName, processInstanceStartDatetime, processInstanceState, processInstanceDebug, processInstanceTitle, processModelInfoId, processModelInfoName, processModelInfoCategory, processModelVersion, startDatetime, state, failType, swimlaneType, timeLimitDatetime, starred, read);
+    return Objects.hash(id, allocateDatetime, allocatedQuserId, allocatedQuserName, allocatedQgroupId, allocatedQgroupName, endDatetime, nodeName, nodeNumber, offerDatetime, processInstanceEndDatetime, processInstanceIdForView, processInstanceId, processInstanceSequenceNumber, processInstanceInitQgroupId, processInstanceInitQgroupName, processInstanceInitQuserId, processInstanceInitQuserName, processInstanceStartDatetime, processInstanceState, processInstanceDebug, processInstanceTitle, processModelInfoId, processModelInfoName, processModelInfoCategory, processModelVersion, startDatetime, state, failType, swimlaneType, timeLimitDatetime, starred, read, data);
   }
 
 
@@ -819,7 +819,6 @@ public class Workitem {
     sb.append("    allocatedQuserName: ").append(toIndentedString(allocatedQuserName)).append("\n");
     sb.append("    allocatedQgroupId: ").append(toIndentedString(allocatedQgroupId)).append("\n");
     sb.append("    allocatedQgroupName: ").append(toIndentedString(allocatedQgroupName)).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    endDatetime: ").append(toIndentedString(endDatetime)).append("\n");
     sb.append("    nodeName: ").append(toIndentedString(nodeName)).append("\n");
     sb.append("    nodeNumber: ").append(toIndentedString(nodeNumber)).append("\n");
@@ -847,6 +846,7 @@ public class Workitem {
     sb.append("    timeLimitDatetime: ").append(toIndentedString(timeLimitDatetime)).append("\n");
     sb.append("    starred: ").append(toIndentedString(starred)).append("\n");
     sb.append("    read: ").append(toIndentedString(read)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
   }

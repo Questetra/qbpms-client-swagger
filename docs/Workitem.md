@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **allocatedQuserName** | **String** | User name |  [optional]
 **allocatedQgroupId** | **Integer** | Organization ID |  [optional]
 **allocatedQgroupName** | **String** | Organization name |  [optional]
-**data** | [**Map&lt;String, ProcessData&gt;**](ProcessData.md) |  |  [optional]
 **endDatetime** | [**OffsetDateTime**](OffsetDateTime.md) | Time of Task completion |  [optional]
 **nodeName** | **String** | Task name |  [optional]
 **nodeNumber** | **Integer** | Task number |  [optional]
@@ -38,6 +37,7 @@ Name | Type | Description | Notes
 **timeLimitDatetime** | [**OffsetDateTime**](OffsetDateTime.md) | Time of Task Deadline |  [optional]
 **starred** | **Boolean** | Starred |  [optional]
 **read** | **Boolean** | read |  [optional]
+**data** | [**Map&lt;String, ProcessData&gt;**](ProcessData.md) |  |  [optional]
 
 
 

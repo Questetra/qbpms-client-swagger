@@ -1,6 +1,6 @@
 # RoleMembershipApi
 
-All URIs are relative to *https://online-demo-en.questetra.net*
+All URIs are relative to *https://192.168.1.12:18443/userweb/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

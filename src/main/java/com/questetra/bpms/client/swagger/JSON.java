@@ -51,28 +51,6 @@ public class JSON {
 
     public static GsonBuilder createGson() {
         GsonFireBuilder fireBuilder = new GsonFireBuilder()
-          .registerTypeSelector(Quser.class, new TypeSelector() {
-            @Override
-            public Class getClassForElement(JsonElement readElement) {
-                Map classByDiscriminatorValue = new HashMap();
-                classByDiscriminatorValue.put("QuserWithPrimaryQgroup".toUpperCase(), QuserWithPrimaryQgroup.class);
-                classByDiscriminatorValue.put("Quser".toUpperCase(), Quser.class);
-                return getClassByDiscriminator(
-                                           classByDiscriminatorValue,
-                                           getDiscriminatorValue(readElement, ""));
-            }
-          })
-          .registerTypeSelector(Workitem.class, new TypeSelector() {
-            @Override
-            public Class getClassForElement(JsonElement readElement) {
-                Map classByDiscriminatorValue = new HashMap();
-                classByDiscriminatorValue.put("WorkitemWithData".toUpperCase(), WorkitemWithData.class);
-                classByDiscriminatorValue.put("Workitem".toUpperCase(), Workitem.class);
-                return getClassByDiscriminator(
-                                           classByDiscriminatorValue,
-                                           getDiscriminatorValue(readElement, ""));
-            }
-          })
         ;
         GsonBuilder builder = fireBuilder.createGsonBuilder();
         return builder;

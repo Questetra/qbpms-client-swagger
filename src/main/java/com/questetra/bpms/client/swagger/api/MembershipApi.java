@@ -60,7 +60,7 @@ public class MembershipApi {
      * Build call for addMembership
      * @param quserId User ID (required)
      * @param qgroupId Organization ID (required)
-     * @param role Member’s role (optional)
+     * @param role Member’s role: _leader or blank (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -137,7 +137,7 @@ public class MembershipApi {
      * Adding a Member to an Organization
      * @param quserId User ID (required)
      * @param qgroupId Organization ID (required)
-     * @param role Member’s role (optional)
+     * @param role Member’s role: _leader or blank (optional)
      * @return MembershipWrapper
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -151,7 +151,7 @@ public class MembershipApi {
      * Adding a Member to an Organization
      * @param quserId User ID (required)
      * @param qgroupId Organization ID (required)
-     * @param role Member’s role (optional)
+     * @param role Member’s role: _leader or blank (optional)
      * @return ApiResponse&lt;MembershipWrapper&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -166,7 +166,7 @@ public class MembershipApi {
      * Adding a Member to an Organization
      * @param quserId User ID (required)
      * @param qgroupId Organization ID (required)
-     * @param role Member’s role (optional)
+     * @param role Member’s role: _leader or blank (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -580,7 +580,7 @@ public class MembershipApi {
      * Build call for updateMembership
      * @param quserId User ID (required)
      * @param qgroupId Organization ID (required)
-     * @param role Member’s role (optional)
+     * @param role Member’s role: _leader or blank (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -657,7 +657,7 @@ public class MembershipApi {
      * Assigning a Leader to an Organization
      * @param quserId User ID (required)
      * @param qgroupId Organization ID (required)
-     * @param role Member’s role (optional)
+     * @param role Member’s role: _leader or blank (optional)
      * @return MembershipWrapper
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -671,7 +671,7 @@ public class MembershipApi {
      * Assigning a Leader to an Organization
      * @param quserId User ID (required)
      * @param qgroupId Organization ID (required)
-     * @param role Member’s role (optional)
+     * @param role Member’s role: _leader or blank (optional)
      * @return ApiResponse&lt;MembershipWrapper&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -686,7 +686,7 @@ public class MembershipApi {
      * Assigning a Leader to an Organization
      * @param quserId User ID (required)
      * @param qgroupId Organization ID (required)
-     * @param role Member’s role (optional)
+     * @param role Member’s role: _leader or blank (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

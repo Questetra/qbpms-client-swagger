@@ -1,6 +1,6 @@
 # WorkitemFormApi
 
-All URIs are relative to *https://online-demo-en.questetra.net*
+All URIs are relative to *https://192.168.1.12:18443/userweb/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -127,6 +127,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: multipart/form-data
  - **Accept**: text/xml
 

@@ -1,6 +1,6 @@
 # MembershipApi
 
-All URIs are relative to *https://online-demo-en.questetra.net*
+All URIs are relative to *https://192.168.1.12:18443/userweb/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -42,7 +42,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 MembershipApi apiInstance = new MembershipApi();
 Long quserId = 789L; // Long | User ID
 Long qgroupId = 789L; // Long | Organization ID
-String role = "role_example"; // String | Member’s role
+String role = "role_example"; // String | Member’s role: _leader or blank
 try {
     MembershipWrapper result = apiInstance.addMembership(quserId, qgroupId, role);
     System.out.println(result);
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **quserId** | **Long**| User ID |
  **qgroupId** | **Long**| Organization ID |
- **role** | **String**| Member’s role | [optional]
+ **role** | **String**| Member’s role: _leader or blank | [optional]
 
 ### Return type
 
@@ -279,7 +279,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 MembershipApi apiInstance = new MembershipApi();
 Long quserId = 789L; // Long | User ID
 Long qgroupId = 789L; // Long | Organization ID
-String role = "role_example"; // String | Member’s role
+String role = "role_example"; // String | Member’s role: _leader or blank
 try {
     MembershipWrapper result = apiInstance.updateMembership(quserId, qgroupId, role);
     System.out.println(result);
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **quserId** | **Long**| User ID |
  **qgroupId** | **Long**| Organization ID |
- **role** | **String**| Member’s role | [optional]
+ **role** | **String**| Member’s role: _leader or blank | [optional]
 
 ### Return type
 
